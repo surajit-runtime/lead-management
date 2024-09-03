@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * 0 -> save draft
+ * 1 -> publish
+ * 2 -> send now
+ */
 class Campaign extends Model
 {
     use HasFactory, SoftDeletes;
@@ -26,7 +31,7 @@ class Campaign extends Model
 
     // Define the attributes that should be cast to native types
     protected $casts = [
-        'date' => 'date',
+        'date' => 'datetime', // Cast to datetime for the 'date' column
         'flag' => 'boolean',
         'success_status' => 'boolean',
     ];

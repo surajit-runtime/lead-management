@@ -16,15 +16,14 @@ return new class extends Migration
             $table->foreignId('audience_id')
                 ->constrained()
                 ->onDelete('cascade');
-            $table->date('date');
+            $table->dateTime('date'); // Date and time
             $table->enum('channel', ['email', 'whatsapp', 'sms']);
             $table->string('subject');
-            $table->text('body');
+            $table->longText('body'); // Use longText for longer text content
             $table->boolean('flag')->default(0);
             $table->boolean('success_status')->default(0);
             $table->timestamps();
-
-            $table->softDeletes();
+            $table->softDeletes(); // Optional: if you want to use soft deletes
         });
     }
 

@@ -15,7 +15,7 @@
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Lead List </a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Audience </a></li>
 
                                     <li class="breadcrumb-item active">All Leads</li>
                                 </ol>

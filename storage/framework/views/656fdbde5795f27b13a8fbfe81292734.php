@@ -485,14 +485,30 @@ require_once ("./assets/lang/" . $lang . ".php");
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
 
-                        <li><a href="<?php echo e(route('campaignPage')); ?>" data-key="">Campaign</a></li>
-                        <li><a href="<?php echo e(route('handleDrop')); ?>" data-key="">Drop</a></li>
-                        <li><a href="<?php echo e(route('publishPage')); ?>" data-key="">Publish</a></li>
-                        <li><a href="<?php echo e(route('handleLeadList')); ?>" data-key="">Lead List</a></li>
-                        <li><a href="<?php echo e(route('handleAudience')); ?>" data-key="">Audience</a></li>
+                        <!-- Audience Dropdown -->
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow" data-key="">Audience</a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="<?php echo e(route('handleLeadList')); ?>" data-key="">All Leads</a></li>
+                                <li><a href="<?php echo e(route('handleAudience')); ?>" data-key="">Audience</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Campaign Dropdown -->
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow" data-key="">Campaign</a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="<?php echo e(route('campaignPage')); ?>" data-key="">Make Campaigns</a></li>
+                                <li><a href="<?php echo e(route('allCampaign')); ?>" data-key="">All Campaigns</a></li>
+                                <li><a href="<?php echo e(route('campaignDrafts')); ?>" data-key="">Draft Campaigns</a></li>
+                                <li><a href="<?php echo e(route('publishCampaigns')); ?>" data-key="">Published Campaigns</a></li>
+                                <li><a href="<?php echo e(route('sentCampaigns')); ?>" data-key="">Sent Campaigns</a></li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </li>
+
                 
                 
 

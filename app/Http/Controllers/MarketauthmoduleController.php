@@ -7,6 +7,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Audience;
+use App\Models\Campaign;
 
 class MarketauthmoduleController extends Controller
 {
@@ -58,21 +59,7 @@ class MarketauthmoduleController extends Controller
 
 
     // Method for POST /drop
-    public function handleDrop(Request $request)
-    {
-        // Logic to handle drop action
-        $data = $request->all(); // Process drop data
 
-        // Redirect or respond as needed
-        return redirect()->route('campaignPage')->with('data', $data);
-    }
-
-    // Method for GET /publish
-    public function showPublishPage()
-    {
-        // Logic to display the publish page
-        return view('market_auth_module.publish'); // Adjust with actual view
-    }
 
     // Method for POST /lead-list
     public function handleLeadList(Request $request)
@@ -257,4 +244,49 @@ class MarketauthmoduleController extends Controller
             return redirect()->back()->with('error', $e->getMessage());
         }
     }
+
+
+    // ! new changes
+    public function allCampaign()
+    {
+        $campaigns = Campaign::all();
+
+        return view('frontend.campaigns', compact('campaigns'));
+    }
+
+    // // Method for GET /campaigns/drafts
+    // public function showDraftCampaigns()
+    // {
+    //     // Dummy data for draft campaigns
+    //     $draftCampaigns = [
+    //         ['id' => 1, 'name' => 'Draft Campaign 1'],
+    //         ['id' => 2, 'name' => 'Draft Campaign 2'],
+    //     ];
+
+    //     return view('frontend.draftCampaigns', ['draftCampaigns' => $draftCampaigns]);
+    // }
+
+    // // Method for GET /campaigns/published
+    // public function showPublishedCampaigns()
+    // {
+    //     // Dummy data for published campaigns
+    //     $publishedCampaigns = [
+    //         ['id' => 3, 'name' => 'Published Campaign 1'],
+    //         ['id' => 4, 'name' => 'Published Campaign 2'],
+    //     ];
+
+    //     return view('frontend.publishedCampaigns', ['publishedCampaigns' => $publishedCampaigns]);
+    // }
+
+    // // Method for GET /campaigns/sent
+    // public function showSentCampaigns()
+    // {
+    //     // Dummy data for sent campaigns
+    //     $sentCampaigns = [
+    //         ['id' => 5, 'name' => 'Sent Campaign 1'],
+    //         ['id' => 6, 'name' => 'Sent Campaign 2'],
+    //     ];
+
+    //     return view('frontend.sentCampaigns', ['sentCampaigns' => $sentCampaigns]);
+    // }
 }

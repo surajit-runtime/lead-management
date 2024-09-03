@@ -97,14 +97,20 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::post('/report-zone-wise', [ReportController::class, 'reportZonePageFilter'])->name('reportZonePageFilter');
 
     // Market Authentication Module
-    Route::get('/campaign', [MarketauthmoduleController::class, 'showCampaignPage'])->name('campaignPage');
-    Route::post('/campaign', [MarketauthmoduleController::class, 'storeCampaign'])->name('storeCampaign');
-    Route::get('/drop', [MarketauthmoduleController::class, 'handleDrop'])->name('handleDrop');
-    Route::get('/publish', [MarketauthmoduleController::class, 'showPublishPage'])->name('publishPage');
+
+    // Audience Routes
     Route::get('/audience', [MarketauthmoduleController::class, 'handleAudience'])->name('handleAudience');
     Route::get('/lead-list', [MarketauthmoduleController::class, 'handleLeadList'])->name('handleLeadList');
-    route::post('/create-campaign', [MarketauthmoduleController::class, 'createCampaign'])->name('createCampaign');
     Route::post('/lead-list', [MarketauthmoduleController::class, 'filteredAllLeadList'])->name('filteredAllLeadList');
+
+    // Campaign Routes
+    Route::get('/campaign', [MarketauthmoduleController::class, 'showCampaignPage'])->name('campaignPage');
+    Route::post('/campaign', [MarketauthmoduleController::class, 'storeCampaign'])->name('storeCampaign');
+
+    Route::get('/all-campaign', [MarketauthmoduleController::class, 'allCampaign'])->name('allCampaign');
+    Route::get('/campaigns/drafts', [MarketauthmoduleController::class, 'showDraftCampaigns'])->name('campaignDrafts');
+    Route::get('/campaigns/published', [MarketauthmoduleController::class, 'showPublishedCampaigns'])->name('publishCampaigns');
+    Route::get('/campaigns/sent', [MarketauthmoduleController::class, 'showSentCampaigns'])->name('sentCampaigns');
 });
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
