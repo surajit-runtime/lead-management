@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <form action="{{ route('allLeadAdminShowPageRequest') }}" method="POST" enctype="multipart/form-data"
+                    <form action="{{ route('filteredAllLeadList') }}" method="POST" enctype="multipart/form-data"
                         class="d-flex align-items-center">
                         @csrf
                         <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
@@ -168,12 +168,12 @@
                                     </tbody>
                                 </table>
                                 <button id="create-campaign" style="float: right;" class="btn btn-primary mt-3">Create
-                                    Campaign</button>
+                                    Audience</button>
                                     <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" style="display: flex; align-items: center; min-height: calc(100% - 1.75rem);">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="campaignModalLabel">Create Campaign</h5>
+                                                    <h5 class="modal-title" id="campaignModalLabel">Create Audience</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -239,14 +239,11 @@
             console.log('jQuery version:', $.fn.jquery);
             console.log('DataTables version:', $.fn.dataTable);
 
-
             table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 
             $(".dataTables_length select").addClass('form-select form-select-sm');
             $('#datatable-buttons').removeClass('dtr-inline');
 
-        });
-        $(document).ready(function() {
             $('#create-campaign').on('click', function() {
                 $('#campaignModal').modal('show');
             });
@@ -255,8 +252,10 @@
                 event.preventDefault();
                 var audienceName = $('#audience-name').val();
 
-                // Sanitize audience name in the client-side (optional, server-side is more important)
-                audienceName = audienceName.replace(/[^a-zA-Z0-9_]/g, '').toLowerCase();
+                // Trim and capitalize the audience name
+                audienceName = audienceName.trim().toUpperCase();
+
+                console.log(audienceName);
 
                 // Collect selected lead IDs
                 var selectedLeads = [];
@@ -276,11 +275,16 @@
                     data: {
                         _token: '{{ csrf_token() }}',
                         audience_name: audienceName,
-                        lead_ids: JSON.stringify(selectedLeads)
+                        lead_ids: selectedLeads // Send as array
                     },
                     success: function(response) {
                         alert('Campaign created successfully.');
                         $('#campaignModal').modal('hide');
+
+                        // Reset the form and uncheck all checkboxes
+                        $('#campaign-form')[0].reset();
+                        $('.select-row').prop('checked', false);
+                        $('#audience-name').val(''); // Clear the audience name field
                     },
                     error: function(xhr) {
                         alert('Something went wrong. Please try again.');
@@ -289,4 +293,6 @@
             });
         });
     </script>
+
+
 @endsection

@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <form action="<?php echo e(route('allLeadAdminShowPageRequest')); ?>" method="POST" enctype="multipart/form-data"
+                    <form action="<?php echo e(route('filteredAllLeadList')); ?>" method="POST" enctype="multipart/form-data"
                         class="d-flex align-items-center">
                         <?php echo csrf_field(); ?>
                         <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
@@ -204,14 +204,11 @@
             console.log('jQuery version:', $.fn.jquery);
             console.log('DataTables version:', $.fn.dataTable);
 
-
             table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 
             $(".dataTables_length select").addClass('form-select form-select-sm');
             $('#datatable-buttons').removeClass('dtr-inline');
 
-        });
-        $(document).ready(function() {
             $('#create-campaign').on('click', function() {
                 $('#campaignModal').modal('show');
             });
@@ -220,8 +217,10 @@
                 event.preventDefault();
                 var audienceName = $('#audience-name').val();
 
-                // Sanitize audience name in the client-side (optional, server-side is more important)
-                audienceName = audienceName.replace(/[^a-zA-Z0-9_]/g, '').toLowerCase();
+                // Trim and capitalize the audience name
+                audienceName = audienceName.trim().toUpperCase();
+
+                console.log(audienceName);
 
                 // Collect selected lead IDs
                 var selectedLeads = [];
@@ -241,11 +240,16 @@
                     data: {
                         _token: '<?php echo e(csrf_token()); ?>',
                         audience_name: audienceName,
-                        lead_ids: JSON.stringify(selectedLeads)
+                        lead_ids: selectedLeads // Send as array
                     },
                     success: function(response) {
                         alert('Campaign created successfully.');
                         $('#campaignModal').modal('hide');
+
+                        // Reset the form and uncheck all checkboxes
+                        $('#campaign-form')[0].reset();
+                        $('.select-row').prop('checked', false);
+                        $('#audience-name').val(''); // Clear the audience name field
                     },
                     error: function(xhr) {
                         alert('Something went wrong. Please try again.');
@@ -254,6 +258,8 @@
             });
         });
     </script>
+
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('frontend.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Runtime\Lead Management Project files\Lead management\resources\views/frontend/leadList.blade.php ENDPATH**/ ?>
