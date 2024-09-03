@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class MarketauthmoduleController extends Controller
 {
@@ -106,6 +108,33 @@ class MarketauthmoduleController extends Controller
     } catch (\Exception $e) {
         return redirect()->back()->with('error', $e->getMessage());
     }
+}
+
+public function createCampaign(Request $request) {
+    // Sanitize audience name
+    $audienceName = preg_replace('/[^a-zA-Z0-9_]/', '', strtolower($request->input('audience_name')));
+
+    // Create table name
+    $tableName = 'campaign_' . $audienceName;
+
+    // Check if table already exists
+    if (Schema::hasTable($tableName)) {
+        return response()->json(['error' => 'Table already exists'], 400);
+    }
+
+    // Create the table
+    Schema::create($tableName, function (Blueprint $table) {
+        $table->id();
+        $table->longText('lead_ids');
+        $table->timestamps();
+    });
+
+    // Insert the serialized lead IDs into the new table
+    DB::table($tableName)->insert([
+        'lead_ids' => $request->input('lead_ids')
+    ]);
+
+    return response()->json(['success' => 'Campaign created successfully']);
 }
 
 

@@ -167,6 +167,32 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                <button id="create-campaign" style="float: right;" class="btn btn-primary mt-3">Create
+                                    Campaign</button>
+                                    <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="display: flex; align-items: center; min-height: calc(100% - 1.75rem);">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="campaignModalLabel">Create Campaign</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form id="campaign-form">
+                                                        <div class="mb-3">
+                                                            <label for="audience-name" class="form-label">Audience Name</label>
+                                                            <input type="text" class="form-control" id="audience-name" name="audience_name" required>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 <script>
                                     // Handle select all checkbox
                                     $('#select-all').on('click', function() {
@@ -219,6 +245,48 @@
             $(".dataTables_length select").addClass('form-select form-select-sm');
             $('#datatable-buttons').removeClass('dtr-inline');
 
+        });
+        $(document).ready(function() {
+            $('#create-campaign').on('click', function() {
+                $('#campaignModal').modal('show');
+            });
+
+            $('#campaign-form').on('submit', function(event) {
+                event.preventDefault();
+                var audienceName = $('#audience-name').val();
+
+                // Sanitize audience name in the client-side (optional, server-side is more important)
+                audienceName = audienceName.replace(/[^a-zA-Z0-9_]/g, '').toLowerCase();
+
+                // Collect selected lead IDs
+                var selectedLeads = [];
+                $('.select-row:checked').each(function() {
+                    selectedLeads.push($(this).val());
+                });
+
+                if (selectedLeads.length === 0) {
+                    alert('Please select at least one lead.');
+                    return;
+                }
+
+                // Send AJAX request to the server
+                $.ajax({
+                    url: '{{ route('createCampaign') }}', // Change this to your route
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        audience_name: audienceName,
+                        lead_ids: JSON.stringify(selectedLeads)
+                    },
+                    success: function(response) {
+                        alert('Campaign created successfully.');
+                        $('#campaignModal').modal('hide');
+                    },
+                    error: function(xhr) {
+                        alert('Something went wrong. Please try again.');
+                    }
+                });
+            });
         });
     </script>
 @endsection
