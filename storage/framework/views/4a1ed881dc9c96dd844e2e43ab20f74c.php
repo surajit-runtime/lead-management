@@ -15,7 +15,7 @@
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Lead Status </a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Lead List </a></li>
 
                                     <li class="breadcrumb-item active">All Leads</li>
                                 </ol>
@@ -137,7 +137,7 @@
                                     <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" style="display: flex; align-items: center; min-height: calc(100% - 1.75rem);">
                                             <div class="modal-content">
-                                                <div class="modal-header">  
+                                                <div class="modal-header">
                                                     <h5 class="modal-title" id="campaignModalLabel">Create Audience</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>

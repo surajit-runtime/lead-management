@@ -13,9 +13,49 @@ class MarketauthmoduleController extends Controller
     // Method for GET /campaign
     public function showCampaignPage()
     {
-        // Logic to display the campaign page
-        return view('market_auth_module.campaign'); // Adjust with actual view
+        $audiences = Audience::all();
+
+        return view('frontend.campaign', ['audiences' => $audiences]);
     }
+
+    public function storeCampaign(Request $request)
+{
+    // Validate the request data
+    $data = $request->validate([
+        'audience' => 'required|exists:audiences,id',
+        'channel' => 'required|in:email,whatsapp,sms',
+        'date' => 'required|date|after:today',
+        'subject' => 'required|string|max:255',
+        'body' => 'required|string',
+    ]);
+
+    // Determine the action (save or publish)
+    if ($request->action == 'save') {
+        // Save logic - flag is 0 for 'save'
+        \App\Models\Campaign::create([
+            'audience_id' => $data['audience'],
+            'channel' => $data['channel'],
+            'date' => $data['date'],
+            'subject' => $data['subject'],
+            'body' => $data['body'],
+            'flag' => 0, // Set flag to 0 for 'save'
+        ]);
+
+        return redirect()->back()->with('success', 'Campaign saved successfully!')->withInput();
+    } elseif ($request->action == 'publish') {
+        \App\Models\Campaign::create([
+            'audience_id' => $data['audience'],
+            'channel' => $data['channel'],
+            'date' => $data['date'],
+            'subject' => $data['subject'],
+            'body' => $data['body'],
+            'flag' => 1, // Set flag to 1 for 'publish'
+        ]);
+
+        return redirect()->back()->with('success', 'Campaign published successfully!')->withInput();
+    }
+}
+
 
     // Method for POST /drop
     public function handleDrop(Request $request)
