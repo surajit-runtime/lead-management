@@ -38,16 +38,16 @@ require_once ("./assets/lang/" . $lang . ".php");
     <!-- App Css-->
     <link href="<?php echo e(asset('assets/css/app.min.css')); ?>" id="app-style" rel="stylesheet" type="text/css" />
     <link href="<?php echo e(asset('assets/libs/flatpickr/flatpickr.min.css')); ?>" rel="stylesheet" type="text/css">
-  
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <!-- DataTables -->
         <link href="<?php echo e(asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css')); ?>" rel="stylesheet" type="text/css" />
 
         <!-- Responsive datatable examples -->
-        <link href="<?php echo e(asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')); ?>" rel="stylesheet" type="text/css" /> 
+        <link href="<?php echo e(asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css')); ?>" rel="stylesheet" type="text/css" />
         <link href="<?php echo e(asset('assets/libs/sweetalert2/sweetalert2.min.css')); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo e(asset('assets/libs/dropzone/min/dropzone.min.css')); ?>" rel="stylesheet" type="text/css" /> 
+        <link href="<?php echo e(asset('assets/libs/dropzone/min/dropzone.min.css')); ?>" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         
@@ -75,12 +75,12 @@ require_once ("./assets/lang/" . $lang . ".php");
 // console.log(idleDuration);
         if (idleDuration > idleTime) {
             // Redirect to logout route or perform logout action
-           
+
             window.location.href = "<?php echo e(route('logout')); ?>";
         }
     }
-    
-       
+
+
 </script>
 
 </head>
@@ -98,7 +98,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <a href="<?php echo e(route('dashboard')); ?>" class="logo logo-dark">
                             <?php else: ?>
                             <a href="<?php echo e(route('Zonedashboard')); ?>" class="logo logo-dark">
-                        <?php endif; ?>        
+                        <?php endif; ?>
                             <span class="logo-sm">
                                 <img src="<?php echo e(asset('assets/images/logo_tata.png')); ?>" alt="" height="15">
                             </span>
@@ -112,7 +112,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <a href="<?php echo e(route('dashboard')); ?>" class="logo logo-light">
                             <?php else: ?>
                             <a href="<?php echo e(route('Zonedashboard')); ?>" class="logo logo-light">
-                        <?php endif; ?>        
+                        <?php endif; ?>
                             <span class="logo-sm">
                                 <img src="<?php echo e(asset('assets/images/logo_tata.png')); ?>" alt="" height="15">
                             </span>
@@ -130,12 +130,12 @@ require_once ("./assets/lang/" . $lang . ".php");
                     <div class="d-flex">
                         <?php if(\Session::has('warning')): ?>
                         <div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
-                            <i class="mdi mdi-alert-outline label-icon"></i><strong><?php echo e(\Session::get('warning')); ?></strong> 
+                            <i class="mdi mdi-alert-outline label-icon"></i><strong><?php echo e(\Session::get('warning')); ?></strong>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         <?php endif; ?>
-                    </div>   
-                                   
+                    </div>
+
                     <!-- App Search-->
                     <?php
                     // use Illuminate\Support\Facades\DB;
@@ -167,14 +167,14 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <div class="position-relative">
                             
                                     <?php if(session()->has('userdata') && session('userdata')->role_id === 1): ?>
-                                  <strong style="font-size: 2rem;"><?php echo e($role_name->role_name); ?></strong>  
+                                  <strong style="font-size: 2rem;"><?php echo e($role_name->role_name); ?></strong>
                                     <?php elseif(session()->has('userdata') && session('userdata')->role_id === 2): ?>
-                                    <strong style="font-size: 2rem;"> <?php echo e($role_name->role_name); ?></strong>    
+                                    <strong style="font-size: 2rem;"> <?php echo e($role_name->role_name); ?></strong>
                                     <?php elseif(session()->has('userdata') && session('userdata')->role_id === 5): ?>
-                                    <strong style="font-size: 2rem;"> <?php echo e($role_name->role_name); ?></strong>     
+                                    <strong style="font-size: 2rem;"> <?php echo e($role_name->role_name); ?></strong>
                                     <?php else: ?>
-                                    <strong style="font-size: 2rem;"><?php echo e($zone_name->call_center_name); ?></strong>    
-                                    <?php endif; ?>  
+                                    <strong style="font-size: 2rem;"><?php echo e($zone_name->call_center_name); ?></strong>
+                                    <?php endif; ?>
                         </div>
                     </form>
                 </div>
@@ -231,14 +231,14 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="col">
                                         <h6 class="m-0 text-warning">
                                          Notifications for Today's Nurturing Leads
-                                         
-                                         
+
+
                                         </h6>
                                     </div>
                                     
                                 </div>
                             </div>
-                            
+
                             <div data-simplebar style="max-height: 230px;">
                                 <?php $__currentLoopData = $leads; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <a href="<?php echo e(route('nuturingLeadPage')); ?>" class="text-reset notification-item">
@@ -246,8 +246,9 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="d-flex">
                                         <div class="flex-grow-1">
                                           <h6 class="mb-1">
-                                            <i class="fas fa-caret-right"></i>   <?php echo e($l->first_name); ?> <?php echo e($l->last_name); ?>   
-                                               
+                                            <i class="fas fa-caret-right"></i>   <?php echo e($l->first_name); ?> <?php echo e($l->last_name); ?>
+
+
                                             </h6>
                                             <?php
                                             $lead_t_name = DB::table('tbl_lead_type')
@@ -264,13 +265,13 @@ require_once ("./assets/lang/" . $lang . ".php");
                                                     <i class="fas fa-circle" style="font-size: 7px;"></i> <?php echo e($l->lead_data); ?>
 
                                                 </p>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
-                             
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                             </div>
                             <hr>
                             <div class="p-3">
@@ -278,21 +279,22 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="col">
                                         <h6 class="m-0" style="color: blue">
                                         Upcoming  Nuturing Leads
-                                         
-                                         
+
+
                                         </h6>
                                     </div>
                                     
                                 </div>
                             </div>
-                           
+
                             <div data-simplebar style="max-height: 230px;">
                                     <?php $__currentLoopData = $upcoming_leads; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $up_l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="d-flex">
                                         <div class="flex-grow-1"style="padding: 18px;">
                                         <h6 class="mb-1">
-                                            <i class="fas fa-caret-right"></i> <?php echo e($up_l->first_name); ?> <?php echo e($up_l->last_name); ?>   
-                                            
+                                            <i class="fas fa-caret-right"></i> <?php echo e($up_l->first_name); ?> <?php echo e($up_l->last_name); ?>
+
+
                                             </h6>
                                             <?php
                                             $lead_t_name = DB::table('tbl_lead_type')
@@ -305,13 +307,13 @@ require_once ("./assets/lang/" . $lang . ".php");
                                                     <i class=" fas fa-circle" style="font-size: 7px;"></i> <?php echo e($lead_t_name->lead_type_name); ?>
 
                                                 </p>
-                                                
+
                                                 <p class="mb-1">
                                                     <i class=" fas fa-circle" style="font-size: 7px;"></i> <?php echo e($up_l->lead_data); ?>
 
                                                 </p>
-                                               
-                                            
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -340,7 +342,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                                 <img class="rounded-circle header-profile-user" src="/images1/<?php echo e(Session::get('userdata')->profile_image); ?>" alt="Profile Image">
                             <?php endif; ?>
 
-                                
+
                             <span class="d-none d-xl-inline-block ms-1 fw-medium">
                                 <?php if(session()->has('userdata') && session('userdata')->role_id === 1): ?>
                                 <?php echo e(Session::get('userdata')->first_name); ?>
@@ -409,11 +411,11 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment</span>
                     </a>
-                    
+
                 </li>
                 <li class="menu-title mt-2" data-key="t-components">ALL New Leads For Call Center</li>
                 
-                
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="fas fa-headset"></i>
@@ -427,8 +429,8 @@ require_once ("./assets/lang/" . $lang . ".php");
                          
                     </ul>
                 </li>
-                
-               
+
+
                 <li class="menu-title mt-2" data-key="t-components">Leads Status Filter Call Center & Lead Status Wise</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
@@ -436,21 +438,21 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <span data-key="t-multi-level">Lead Status </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        
+
                         <li>
-                            
+
                                 <li><a href="<?php echo e(route('allLeadAdminShowPage')); ?>" data-key="t-level-2-1">All Leads</a></li>
                                 
                                 
-                           
+
                         </li>
-                       
+
                     </ul>
                 </li>
                 
-               
+
                 
-                     
+                    
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="fa fa-cog"></i>
@@ -469,11 +471,26 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <span data-key="t-email">Reports</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                     
+
                         <li><a href="<?php echo e(route('reportPage')); ?>" data-key="t-lock-screen">Report</a></li>
                         <li><a href="<?php echo e(route('bmWiseReportpage')); ?>" data-key="t-confirm-mail">Report BM wise</a></li>
                         <li><a href="<?php echo e(route('reportZonePage')); ?>" data-key="t-two-step-verification">Report Zone Wise</a></li>
-                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="fa fa-lock"></i>
+                        <span data-key="">Market Auth Module</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+
+                        <li><a href="<?php echo e(route('campaignPage')); ?>" data-key="">Campaign</a></li>
+                        <li><a href="<?php echo e(route('handleDrop')); ?>" data-key="">Drop</a></li>
+                        <li><a href="<?php echo e(route('publishPage')); ?>" data-key="">Publish</a></li>
+                        <li><a href="<?php echo e(route('handleLeadList')); ?>" data-key="">Lead List</a></li>
+                        <li><a href="<?php echo e(route('handleAudience')); ?>" data-key="">Audience</a></li>
+
                     </ul>
                 </li>
                 
@@ -485,7 +502,7 @@ require_once ("./assets/lang/" . $lang . ".php");
 
                 
 
-           
+
 
                 
 
@@ -501,7 +518,7 @@ require_once ("./assets/lang/" . $lang . ".php");
 
                 
 
-           
+
                 <?php elseif(session()->has('userdata') && session('userdata')->role_id === 2): ?>
                 <li>
                     <a href="<?php echo e(route('dashboard')); ?>">
@@ -516,19 +533,19 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">New Leads</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Admin Or Manager</li>
                 <li>
                     <a href="<?php echo e(route('leadAssignAdminPage')); ?>">
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 
-               
-              
+
+
                 <?php elseif(session()->has('userdata') && session('userdata')->role_id === 5): ?>
                 <li>
                     <a href="<?php echo e(route('dashboard')); ?>">
@@ -543,24 +560,24 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-list"></i>
                         <span data-key="t-maps">State List</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 
                 <li>
                     <a href="<?php echo e(route('fetchDistrictList')); ?>">
                         <i class="fa fa-list"></i>
                         <span data-key="t-lock-screen">District List</span>
                     </a>
-                    
-                </li> 
-                
+
+                </li>
+
                 <li>
                     <a href="<?php echo e(route('fetchBmList')); ?>">
                         <i class="fa fa-list"></i>
                         <span data-key="t-two-step-verification">BM-Distributor List</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 
 
                 <?php elseif(session()->has('userdata') && session('userdata')->role_id === 3): ?>
@@ -577,7 +594,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">New Leads</span>
                     </a>
-                    
+
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
@@ -594,11 +611,11 @@ require_once ("./assets/lang/" . $lang . ".php");
                 </li>
                 <?php endif; ?>
             </ul>
-          
+
             
         </div>
         <!-- Sidebar -->
     </div>
 </div>
 <!-- Left Sidebar End -->
-  <?php /**PATH C:\Runtime\Lead Management Project files\Lead management\resources\views/frontend/layouts/header.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Runtime\Lead Management Project files\Lead management\resources\views/frontend/layouts/header.blade.php ENDPATH**/ ?>

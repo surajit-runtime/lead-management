@@ -9,6 +9,7 @@ use App\Http\Controllers\LeadAssignController;
 use App\Http\Controllers\nurturingLeadController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\HotLeadController;
+use App\Http\Controllers\MarketauthmoduleController;
 use App\Http\Controllers\State_Dis_Distributor_BM_Controller;
 
 /*
@@ -45,15 +46,12 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1,2,3']], function () {
     Route::get('/new-call', [HomeController::class, 'newCallPage'])->name('newCallPage');
     Route::get('/call_not_received/{id}', [LeadAssignController::class, 'call_not_receivd']);
     Route::post('/new-call/update', [LeadAssignController::class, 'update_NewLead_CallCenter'])->name('updateNewLeadCallcenter');
-
-
 });
 Route::group(['middleware' => ['AdminAuth', 'role.access:1,2']], function () {
     Route::get('/assign-leads-admin', [HomeController::class, 'leadAssignAdminPage'])->name('leadAssignAdminPage');
     Route::POST('/update-zone/', [LeadAssignController::class, 'update']);
     Route::POST('/delet-lead/', [LeadAssignController::class, 'destroy']);
     Route::get('/fetch-districts/', [CSVuploadController::class, 'fetchDistricts']);
-
 });
 Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
 
@@ -98,6 +96,12 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::get('/report-zone-wise', [ReportController::class, 'reportZonePage'])->name('reportZonePage');
     Route::post('/report-zone-wise', [ReportController::class, 'reportZonePageFilter'])->name('reportZonePageFilter');
 
+    // Market Authentication Module
+    Route::get('/campaign', [MarketauthmoduleController::class, 'showCampaignPage'])->name('campaignPage');
+    Route::get('/drop', [MarketauthmoduleController::class, 'handleDrop'])->name('handleDrop');
+    Route::get('/publish', [MarketauthmoduleController::class, 'showPublishPage'])->name('publishPage');
+    Route::get('/lead-list', [MarketauthmoduleController::class, 'handleLeadList'])->name('handleLeadList');
+    Route::get('/audience', [MarketauthmoduleController::class, 'handleAudience'])->name('handleAudience');
 });
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -113,8 +117,6 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:5']], function () {
     Route::get('/BM-list', [HomeController::class, 'fetchBmList'])->name('fetchBmList');
     Route::get('/bm_edit/{id}', [State_Dis_Distributor_BM_Controller::class, 'editpage'])->name('editpage');
     Route::put('bm_dist_detail/{id}/update', [State_Dis_Distributor_BM_Controller::class, 'updateBmDist'])->name('user.updateBmDist');
-
-
 });
 
 
@@ -140,7 +142,4 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:3']], function () {
     //  Route::post('/new-call/update',  [LeadAssignController::class, 'update_NewLead_CallCenter'])->name('updateNewLeadCallcenter');
     Route::post('/resume-call/update', [nurturingLeadController::class, 'updateNurturingLead'])->name('updateNurturingLead');
     Route::post('/hotLead-call/update', [HotLeadController::class, 'updateHotLead'])->name('updateHotLead');
-
-
-
 });

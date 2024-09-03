@@ -38,16 +38,16 @@ require_once ("./assets/lang/" . $lang . ".php");
     <!-- App Css-->
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/libs/flatpickr/flatpickr.min.css') }}" rel="stylesheet" type="text/css">
-  
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <!-- DataTables -->
         <link href="{{ asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
 
         <!-- Responsive datatable examples -->
-        <link href="{{ asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" /> 
+        <link href="{{ asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('assets/libs/dropzone/min/dropzone.min.css') }}" rel="stylesheet" type="text/css" /> 
+        <link href="{{ asset('assets/libs/dropzone/min/dropzone.min.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css"> --}}
         {{-- <!-- Bootstrap CSS (add the appropriate version) -->
@@ -87,12 +87,12 @@ require_once ("./assets/lang/" . $lang . ".php");
 // console.log(idleDuration);
         if (idleDuration > idleTime) {
             // Redirect to logout route or perform logout action
-           
+
             window.location.href = "{{ route('logout') }}";
         }
     }
-    
-       
+
+
 </script>
 
 </head>
@@ -110,7 +110,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <a href="{{ route('dashboard') }}" class="logo logo-dark">
                             @else
                             <a href="{{ route('Zonedashboard') }}" class="logo logo-dark">
-                        @endif        
+                        @endif
                             <span class="logo-sm">
                                 <img src="{{ asset('assets/images/logo_tata.png') }}" alt="" height="15">
                             </span>
@@ -124,7 +124,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <a href="{{ route('dashboard') }}" class="logo logo-light">
                             @else
                             <a href="{{ route('Zonedashboard') }}" class="logo logo-light">
-                        @endif        
+                        @endif
                             <span class="logo-sm">
                                 <img src="{{ asset('assets/images/logo_tata.png') }}" alt="" height="15">
                             </span>
@@ -145,12 +145,12 @@ require_once ("./assets/lang/" . $lang . ".php");
                     <div class="d-flex">
                         @if (\Session::has('warning'))
                         <div class="alert alert-warning alert-dismissible alert-label-icon label-arrow fade show" role="alert">
-                            <i class="mdi mdi-alert-outline label-icon"></i><strong>{{ \Session::get('warning') }}</strong> 
+                            <i class="mdi mdi-alert-outline label-icon"></i><strong>{{ \Session::get('warning') }}</strong>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         @endif
-                    </div>   
-                                   
+                    </div>
+
                     <!-- App Search-->
                     @php
                     // use Illuminate\Support\Facades\DB;
@@ -184,14 +184,14 @@ require_once ("./assets/lang/" . $lang . ".php");
                             <button class="btn btn-primary" type="button"><i
                                     class="bx bx-search-alt align-middle"></i></button> --}}
                                     @if (session()->has('userdata') && session('userdata')->role_id === 1)
-                                  <strong style="font-size: 2rem;">{{ $role_name->role_name }}</strong>  
+                                  <strong style="font-size: 2rem;">{{ $role_name->role_name }}</strong>
                                     @elseif(session()->has('userdata') && session('userdata')->role_id === 2)
-                                    <strong style="font-size: 2rem;"> {{ $role_name->role_name }}</strong>    
+                                    <strong style="font-size: 2rem;"> {{ $role_name->role_name }}</strong>
                                     @elseif(session()->has('userdata') && session('userdata')->role_id === 5)
-                                    <strong style="font-size: 2rem;"> {{ $role_name->role_name }}</strong>     
+                                    <strong style="font-size: 2rem;"> {{ $role_name->role_name }}</strong>
                                     @else
-                                    <strong style="font-size: 2rem;">{{ $zone_name->call_center_name }}</strong>    
-                                    @endif  
+                                    <strong style="font-size: 2rem;">{{ $zone_name->call_center_name }}</strong>
+                                    @endif
                         </div>
                     </form>
                 </div>
@@ -222,24 +222,24 @@ require_once ("./assets/lang/" . $lang . ".php");
                  <div class="dropdown d-none d-sm-inline-block">
                        {{--      <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                          
+
                            @if ($lang == 'en')
                                 <img class="me-2" src="{{ asset('assets/images/flags/us.jpg') }}" alt="Header Language" height="16">
-                            
+
                            @elseif ($lang == 'es')
                                 <img class="me-2" src="{{ asset('assets/images/flags/spain.jpg') }}" alt="Header Language" height="16">
-                            
+
                            @elseif ($lang == 'de')
                                 <img class="me-2" src="{{ asset('assets/images/flags/germany.jpg') }}" alt="Header Language" height="16">
-                            
+
                            @elseif ($lang == 'it')
                                 <img class="me-2" src="{{ asset('assets/images/flags/italy.jpg') }}" alt="Header Language" height="16">
-                            
+
                            @elseif ($lang == 'ru')
                                 <img class="me-2" src="{{ asset('assets/images/flags/russia.jpg') }}" alt="Header Language" height="16">
                             @endif
-                           
-                           
+
+
                         </button>
                        <div class="dropdown-menu dropdown-menu-end">
 
@@ -349,19 +349,19 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="col">
                                         <h6 class="m-0 text-warning">
                                          Notifications for Today's Nurturing Leads
-                                         
-                                         
+
+
                                         </h6>
                                     </div>
                                     {{-- <div class="col-auto">
                                         <a href="#!" class="small text-reset text-decoration-underline">
                                       ({{ $leads->count()}})
-                                            
+
                                         </a>
                                     </div> --}}
                                 </div>
                             </div>
-                            
+
                             <div data-simplebar style="max-height: 230px;">
                                 @foreach($leads as $l)
                                 <a href="{{ route('nuturingLeadPage') }}" class="text-reset notification-item">
@@ -369,8 +369,8 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="d-flex">
                                         <div class="flex-grow-1">
                                           <h6 class="mb-1">
-                                            <i class="fas fa-caret-right"></i>   {{ $l->first_name }} {{ $l->last_name }}   
-                                               
+                                            <i class="fas fa-caret-right"></i>   {{ $l->first_name }} {{ $l->last_name }}
+
                                             </h6>
                                             @php
                                             $lead_t_name = DB::table('tbl_lead_type')
@@ -385,13 +385,13 @@ require_once ("./assets/lang/" . $lang . ".php");
                                                 <p class="mb-1">
                                                     <i class="fas fa-circle" style="font-size: 7px;"></i> {{ $l->lead_data }}
                                                 </p>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                                @endforeach 
-                             
+                                @endforeach
+
                             </div>
                             <hr>
                             <div class="p-3">
@@ -399,26 +399,26 @@ require_once ("./assets/lang/" . $lang . ".php");
                                     <div class="col">
                                         <h6 class="m-0" style="color: blue">
                                         Upcoming  Nuturing Leads
-                                         
-                                         
+
+
                                         </h6>
                                     </div>
                                     {{-- <div class="col-auto">
                                         <a href="#!" class="small text-reset text-decoration-underline">
                                       ({{ $leads->count()}})
-                                            
+
                                         </a>
                                     </div> --}}
                                 </div>
                             </div>
-                           
+
                             <div data-simplebar style="max-height: 230px;">
                                     @foreach($upcoming_leads as $up_l)
                                     <div class="d-flex">
                                         <div class="flex-grow-1"style="padding: 18px;">
                                         <h6 class="mb-1">
-                                            <i class="fas fa-caret-right"></i> {{ $up_l->first_name }} {{ $up_l->last_name }}   
-                                            
+                                            <i class="fas fa-caret-right"></i> {{ $up_l->first_name }} {{ $up_l->last_name }}
+
                                             </h6>
                                             @php
                                             $lead_t_name = DB::table('tbl_lead_type')
@@ -430,12 +430,12 @@ require_once ("./assets/lang/" . $lang . ".php");
                                                 <p class="mb-1">
                                                     <i class=" fas fa-circle" style="font-size: 7px;"></i> {{ $lead_t_name->lead_type_name }}
                                                 </p>
-                                                
+
                                                 <p class="mb-1">
                                                     <i class=" fas fa-circle" style="font-size: 7px;"></i> {{ $up_l->lead_data }}
                                                 </p>
-                                               
-                                            
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -444,9 +444,9 @@ require_once ("./assets/lang/" . $lang . ".php");
                             {{-- <div class="p-2 border-top d-grid">
                                 <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
                                     <i class="mdi mdi-arrow-right-circle me-1"></i> <span>
-                                        
+
                                       {{  $language["View_More"]}}
-                                       
+
                                     </span>
                                 </a>
                             </div> --}}
@@ -474,7 +474,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                                 <img class="rounded-circle header-profile-user" src="/images1/{{ Session::get('userdata')->profile_image }}" alt="Profile Image">
                             @endif
 
-                                
+
                             <span class="d-none d-xl-inline-block ms-1 fw-medium">
                                 @if (session()->has('userdata') && session('userdata')->role_id === 1)
                                 {{ Session::get('userdata')->first_name}}
@@ -493,7 +493,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                             {{-- <a class="dropdown-item" href="apps-contacts-profile.php"><i
                                     class="mdi mdi-face-profile font-size-16 align-middle me-1"></i>
                                    {{ $language["Profile"]}}
-                              
+
                             </a>
                             <a class="dropdown-item" href="auth-lock-screen.php"><i
                                     class="mdi mdi-lock font-size-16 align-middle me-1"></i>
@@ -1040,7 +1040,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment</span>
                     </a>
-                    
+
                 </li>
                 <li class="menu-title mt-2" data-key="t-components">ALL New Leads For Call Center</li>
                 {{-- <li>
@@ -1048,9 +1048,9 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">New Leads</span>
                     </a>
-                    
+
                 </li>  --}}
-                
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="fas fa-headset"></i>
@@ -1066,8 +1066,8 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <li><a href="auth-two-step-verification.php" data-key="t-two-step-verification">{{   $language["Two_Step_Verification"]}}</a></li> --}}
                     </ul>
                 </li>
-                
-               
+
+
                 <li class="menu-title mt-2" data-key="t-components">Leads Status Filter Call Center & Lead Status Wise</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
@@ -1075,15 +1075,15 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <span data-key="t-multi-level">Lead Status </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        
+
                         <li>
-                            
+
                                 <li><a href="{{ route('allLeadAdminShowPage') }}" data-key="t-level-2-1">All Leads</a></li>
                                 {{-- <li><a href="javascript: void(0);" data-key="t-level-2-2">Nurturing Leads</a></li> --}}
                                 {{-- <li><a href="javascript: void(0);" data-key="t-level-2-3">Dead Leads</a></li> --}}
-                           
+
                         </li>
-                       
+
                     </ul>
                 </li>
                 {{-- <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Manager</li>
@@ -1092,9 +1092,9 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment Manager</span>
                     </a>
-                    
+
                 </li>  --}}
-               
+
                 {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="fas fa-bullhorn"></i>
@@ -1109,7 +1109,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <li><a href="auth-email-verification.php" data-key="t-email-verification">{{   $language["Email_Verification"]}}</a></li>
                         <li><a href="auth-two-step-verification.php" data-key="t-two-step-verification">{{   $language["Two_Step_Verification"]}}</a></li> --}}
                     {{-- </ul>
-                </li> --}} 
+                </li> --}}
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i class="fa fa-cog"></i>
@@ -1131,11 +1131,26 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <span data-key="t-email">Reports</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                     
+
                         <li><a href="{{ route('reportPage') }}" data-key="t-lock-screen">Report</a></li>
                         <li><a href="{{ route('bmWiseReportpage') }}" data-key="t-confirm-mail">Report BM wise</a></li>
                         <li><a href="{{ route('reportZonePage') }}" data-key="t-two-step-verification">Report Zone Wise</a></li>
-                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i class="fa fa-lock"></i>
+                        <span data-key="">Market Auth Module</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+
+                        <li><a href="{{ route('campaignPage') }}" data-key="">Campaign</a></li>
+                        <li><a href="{{ route('handleDrop') }}" data-key="">Drop</a></li>
+                        <li><a href="{{ route('publishPage') }}" data-key="">Publish</a></li>
+                        <li><a href="{{ route('handleLeadList') }}" data-key="">Lead List</a></li>
+                        <li><a href="{{ route('handleAudience') }}" data-key="">Audience</a></li>
+
                     </ul>
                 </li>
                 {{-- <li>
@@ -1161,13 +1176,13 @@ require_once ("./assets/lang/" . $lang . ".php");
                                 <span data-key="t-calendar">{{   $language["Calendar"]}}</span>
                             </a>
                         </li>
-        
+
                         <li>
                             <a href="apps-chat.php">
                                 <span data-key="t-chat">{{   $language["Chat"]}}</span>
                             </a>
                         </li>
-        
+
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">
                                 <span data-key="t-email">{{   $language["Email"]}}</span>
@@ -1250,7 +1265,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                     </a>
                 </li> --}}
 
-           
+
 
                 {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow">
@@ -1360,7 +1375,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                     </ul>
                 </li> --}}
 
-           
+
                 @elseif (session()->has('userdata') && session('userdata')->role_id === 2)
                 <li>
                     <a href="{{ route('dashboard') }}">
@@ -1380,26 +1395,26 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">New Leads</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Admin Or Manager</li>
                 <li>
                     <a href="{{ route('leadAssignAdminPage') }}">
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 {{-- <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Manager</li>
                 <li>
                     <a href="{{ route('leadAssignManagerPage') }}">
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment Manager</span>
                     </a>
-                    
+
                 </li>  --}}
-               
-              
+
+
                 @elseif (session()->has('userdata') && session('userdata')->role_id === 5)
                 <li>
                     <a href="{{ route('dashboard') }}">
@@ -1419,31 +1434,31 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-list"></i>
                         <span data-key="t-maps">State List</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 {{-- <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Admin Or Manager</li> --}}
                 <li>
                     <a href="{{ route('fetchDistrictList') }}">
                         <i class="fa fa-list"></i>
                         <span data-key="t-lock-screen">District List</span>
                     </a>
-                    
-                </li> 
-                
+
+                </li>
+
                 <li>
                     <a href="{{ route('fetchBmList') }}">
                         <i class="fa fa-list"></i>
                         <span data-key="t-two-step-verification">BM-Distributor List</span>
                     </a>
-                    
-                </li> 
+
+                </li>
                 {{-- <li class="menu-title mt-2" data-key="t-components">Leads Assignment By Manager</li>
                 <li>
                     <a href="{{ route('leadAssignManagerPage') }}">
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">Lead Assignment Manager</span>
                     </a>
-                    
+
                 </li>  --}}
 
                 @elseif (session()->has('userdata') && session('userdata')->role_id === 3)
@@ -1465,7 +1480,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <i class="fa fa-tasks"></i>
                         <span data-key="t-dashboard">New Leads</span>
                     </a>
-                    
+
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
@@ -1485,7 +1500,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                 </li>
                 @endif
             </ul>
-          
+
             {{-- <div class="card sidebar-alert border-0 text-center mx-4 mb-0 mt-5">
                 <div class="card-body">
                     <img src="assets/images/giftbox.png" alt="">
@@ -1501,4 +1516,3 @@ require_once ("./assets/lang/" . $lang . ".php");
     </div>
 </div>
 <!-- Left Sidebar End -->
-  
