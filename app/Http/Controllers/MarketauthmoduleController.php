@@ -111,7 +111,7 @@ class MarketauthmoduleController extends Controller
         }
     }
 
-        public function createCampaign(Request $request)
+    public function createCampaign(Request $request)
     {
         $audienceName = $request->input('audience_name');
 
@@ -201,10 +201,20 @@ class MarketauthmoduleController extends Controller
     // Method for POST /audience
     public function handleAudience(Request $request)
     {
-        // Logic to handle audience data
-        $audienceData = $request->all();
+        try {
+            // Fetch all audiences
+            $audiences = DB::table('audiences')
+                ->select('id', 'audience_name', 'lead_ids', 'created_at', 'updated_at')
+                ->orderBy('id', 'DESC')
+                ->get();
 
-        // Redirect or respond as needed
-        return redirect()->route('publishPage')->with('audienceData', $audienceData);
+            // foreach ($audiences as $audience) {
+            //     $audience->lead_ids = unserialize($audience->lead_ids);
+            // }
+
+            return view('frontend.allAudiencesAdminShow', ['audiences' => $audiences]);
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', $e->getMessage());
+        }
     }
 }

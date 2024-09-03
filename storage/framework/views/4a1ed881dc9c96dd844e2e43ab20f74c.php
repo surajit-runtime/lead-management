@@ -133,12 +133,12 @@
                                     </tbody>
                                 </table>
                                 <button id="create-campaign" style="float: right;" class="btn btn-primary mt-3">Create
-                                    Campaign</button>
+                                    Audience</button>
                                     <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" style="display: flex; align-items: center; min-height: calc(100% - 1.75rem);">
                                             <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="campaignModalLabel">Create Campaign</h5>
+                                                <div class="modal-header">  
+                                                    <h5 class="modal-title" id="campaignModalLabel">Create Audience</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">

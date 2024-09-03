@@ -100,8 +100,8 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::get('/campaign', [MarketauthmoduleController::class, 'showCampaignPage'])->name('campaignPage');
     Route::get('/drop', [MarketauthmoduleController::class, 'handleDrop'])->name('handleDrop');
     Route::get('/publish', [MarketauthmoduleController::class, 'showPublishPage'])->name('publishPage');
-    Route::get('/lead-list', [MarketauthmoduleController::class, 'handleLeadList'])->name('handleLeadList');
     Route::get('/audience', [MarketauthmoduleController::class, 'handleAudience'])->name('handleAudience');
+    Route::get('/lead-list', [MarketauthmoduleController::class, 'handleLeadList'])->name('handleLeadList');
     route::post('/create-campaign', [MarketauthmoduleController::class, 'createCampaign'])->name('createCampaign');
     Route::post('/lead-list', [MarketauthmoduleController::class, 'filteredAllLeadList'])->name('filteredAllLeadList');
 });
