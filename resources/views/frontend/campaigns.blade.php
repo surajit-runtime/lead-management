@@ -26,26 +26,35 @@
                 </div>
                 <!-- end page title -->
 
-                 <!-- Start filter form -->
-                 @if($showFilter)
-                 <div class="row">
-                     <form action="{{ route('allCampaignsFilter') }}" method="GET" class="d-flex align-items-center">
-                         @csrf
-                         <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
-                             <select id="campaign_flag" name="campaign_flag" class="form-control form-select">
-                                 <option value="" disabled selected>Select Campaign Status</option>
-                                 <option value="0" {{ request('campaign_flag') == '0' ? 'selected' : '' }}>Draft</option>
-                                 <option value="1" {{ request('campaign_flag') == '1' ? 'selected' : '' }}>Published</option>
-                                 <option value="2" {{ request('campaign_flag') == '2' ? 'selected' : '' }}>Sent</option>
-                             </select>
-                         </div>
-                         <div class="ms-3" style="margin-top: -13px;">
-                             <button type="submit" class="btn btn-primary">Filter</button>
-                         </div>
-                     </form>
-                 </div>
-             @endif
-             <!-- End filter form -->
+                <!-- Start filter form -->
+                @if ($showFilter)
+                    <div class="row align-items-center justify-content-between">
+
+                        <form action="{{ route('allCampaignsFilter') }}" method="GET" class="d-flex align-items-center w-auto">
+                            @csrf
+                            <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
+                                <select id="campaign_flag" name="campaign_flag" class="form-control form-select">
+                                    <option value="" disabled selected>Select Campaign Status</option>
+                                    <option value="0" {{ request('campaign_flag') == '0' ? 'selected' : '' }}>Draft
+                                    </option>
+                                    <option value="1" {{ request('campaign_flag') == '1' ? 'selected' : '' }}>Published
+                                    </option>
+                                    <option value="2" {{ request('campaign_flag') == '2' ? 'selected' : '' }}>Sent
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="ms-3" style="margin-top: -13px;">
+                                <button type="submit" class="btn btn-primary">Filter</button>
+                            </div>
+                        </form>
+                        <div class="w-auto mb-auto">
+                            <a href="{{route('campaignPage')}}" id="create-campaign" class="btn btn-primary">Create
+                                Campaigns</a>
+
+                        </div>
+                    </div>
+                @endif
+                <!-- End filter form -->
 
                 <div class="row">
                     <div class="col-12">
@@ -78,18 +87,21 @@
                                                 <td>{!! $campaign->body !!}</td>
                                                 <td>
                                                     @switch($campaign->flag)
-                                                    @case(0)
-                                                        Draft
+                                                        @case(0)
+                                                            Draft
                                                         @break
-                                                    @case(1)
-                                                        Published
+
+                                                        @case(1)
+                                                            Published
                                                         @break
-                                                    @case(2)
-                                                        Sent
+
+                                                        @case(2)
+                                                            Sent
                                                         @break
-                                                    @default
-                                                        Unknown
-                                                @endswitch
+
+                                                        @default
+                                                            Unknown
+                                                    @endswitch
                                                 </td>
                                                 <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
                                             </tr>

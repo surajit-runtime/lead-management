@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18">Make Campaign</h4>
+                            <h4 class="mb-sm-0 font-size-18">Create Campaign</h4>
                             <!-- Display success message -->
                             <?php if(session('success')): ?>
                                 <div class="alert alert-success">

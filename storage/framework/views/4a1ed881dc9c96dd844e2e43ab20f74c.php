@@ -96,6 +96,8 @@
 
                 <br>
                 <br>
+                <div id="alert-container"></div>
+
                 <!-- end page title -->
                 <div class="row">
 
@@ -205,68 +207,73 @@
     <!-- end main content-->
 
     </div>
+    
     <script>
         $(document).ready(function() {
-            // Initialize DataTable
-            var table = $('#datatable-buttons').DataTable({
-                lengthChange: true,
-            });
-            console.log('jQuery version:', $.fn.jquery);
-            console.log('DataTables version:', $.fn.dataTable);
+    // Initialize DataTable
+    var table = $('#datatable-buttons').DataTable({
+        lengthChange: true,
+    });
 
-            table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+    table.buttons().container().appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
 
-            $(".dataTables_length select").addClass('form-select form-select-sm');
-            $('#datatable-buttons').removeClass('dtr-inline');
+    $(".dataTables_length select").addClass('form-select form-select-sm');
+    $('#datatable-buttons').removeClass('dtr-inline');
 
-            $('#create-campaign').on('click', function() {
-                $('#campaignModal').modal('show');
-            });
+    $('#create-campaign').on('click', function() {
+        $('#campaignModal').modal('show');
+    });
 
-            $('#campaign-form').on('submit', function(event) {
-                event.preventDefault();
-                var audienceName = $('#audience-name').val();
+    $('#campaign-form').on('submit', function(event) {
+        event.preventDefault();
+        var audienceName = $('#audience-name').val().trim().toUpperCase();
 
-                // Trim and capitalize the audience name
-                audienceName = audienceName.trim().toUpperCase();
-
-                console.log(audienceName);
-
-                // Collect selected lead IDs
-                var selectedLeads = [];
-                $('.select-row:checked').each(function() {
-                    selectedLeads.push($(this).val());
-                });
-
-                if (selectedLeads.length === 0) {
-                    alert('Please select at least one lead.');
-                    return;
-                }
-
-                // Send AJAX request to the server
-                $.ajax({
-                    url: '<?php echo e(route('careateAudience')); ?>', // Change this to your route
-                    method: 'POST',
-                    data: {
-                        _token: '<?php echo e(csrf_token()); ?>',
-                        audience_name: audienceName,
-                        lead_ids: selectedLeads // Send as array
-                    },
-                    success: function(response) {
-                        alert('Campaign created successfully.');
-                        $('#campaignModal').modal('hide');
-
-                        // Reset the form and uncheck all checkboxes
-                        $('#campaign-form')[0].reset();
-                        $('.select-row').prop('checked', false);
-                        $('#audience-name').val(''); // Clear the audience name field
-                    },
-                    error: function(xhr) {
-                        alert('Something went wrong. Please try again.');
-                    }
-                });
-            });
+        // Collect selected lead IDs
+        var selectedLeads = [];
+        $('.select-row:checked').each(function() {
+            selectedLeads.push($(this).val());
         });
+
+        if (selectedLeads.length === 0) {
+            showAlert('Please select at least one lead.', 'danger');
+            return;
+        }
+
+        // Send AJAX request to the server
+        $.ajax({
+            url: '<?php echo e(route('careateAudience')); ?>',
+            method: 'POST',
+            data: {
+                _token: '<?php echo e(csrf_token()); ?>',
+                audience_name: audienceName,
+                lead_ids: selectedLeads
+            },
+            success: function(response) {
+                showAlert('Campaign created successfully.', 'success');
+                $('#campaignModal').modal('hide');
+
+                // Reset the form and uncheck all checkboxes
+                $('#campaign-form')[0].reset();
+                $('.select-row').prop('checked', false);
+                $('#audience-name').val('');
+            },
+            error: function(xhr) {
+                showAlert('Something went wrong. Please try again.', 'danger');
+            }
+        });
+    });
+
+    function showAlert(message, type) {
+        var alertHtml = `
+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+        $('#alert-container').html(alertHtml);
+    }
+});
+
     </script>
 
 

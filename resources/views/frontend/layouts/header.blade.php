@@ -1158,7 +1158,7 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <li>
                             <a href="javascript: void(0);" class="has-arrow" data-key="">Campaign</a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('campaignPage') }}" data-key="">Make Campaigns</a></li>
+                                <li><a href="{{ route('campaignPage') }}" data-key="">Create Campaigns</a></li>
                                 <li><a href="{{ route('allCampaign') }}" data-key="">All Campaigns</a></li>
                                 <li><a href="{{ route('campaignDrafts') }}" data-key="">Draft Campaigns</a></li>
                                 <li><a href="{{ route('publishCampaigns') }}" data-key="">Published Campaigns</a></li>
