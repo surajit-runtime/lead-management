@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AudienceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -113,6 +114,10 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::get('/campaigns/drafts', [MarketauthmoduleController::class, 'showDraftCampaigns'])->name('campaignDrafts');
     Route::get('/campaigns/published', [MarketauthmoduleController::class, 'showPublishedCampaigns'])->name('publishCampaigns');
     Route::get('/campaigns/sent', [MarketauthmoduleController::class, 'showSentCampaigns'])->name('sentCampaigns');
+
+    // audience leads
+    route::get('/audience/{id}/leads', [AudienceController::class, 'showLeads'])->name('audience.leads');
+    Route::post('/audience/{id}/leads/{leadId}/remove', [AudienceController::class, 'removeLead'])->name('audience.leads.remove');
 });
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
