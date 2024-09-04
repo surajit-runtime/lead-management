@@ -19,43 +19,115 @@ class MarketauthmoduleController extends Controller
         return view('frontend.campaign', ['audiences' => $audiences]);
     }
 
-    public function storeCampaign(Request $request)
+//     public function storeCampaign(Request $request)
+// {
+//     // Validate the request data
+//     $data = $request->validate([
+//         'audience' => 'required|exists:audiences,id',
+//         'channel' => 'required|in:email,whatsapp,sms',
+//         'date' => 'required|date|after:today',
+//         'subject' => 'required|string|max:255',
+//         'body' => 'required|string',
+//     ]);
+
+//     // Determine the action (save or publish)
+//     if ($request->action == 'save') {
+//         // Save logic - flag is 0 for 'save'
+//         \App\Models\Campaign::create([
+//             'audience_id' => $data['audience'],
+//             'channel' => $data['channel'],
+//             'date' => $data['date'],
+//             'subject' => $data['subject'],
+//             'body' => $data['body'],
+//             'flag' => 0, // Set flag to 0 for 'save'
+//         ]);
+
+//         return redirect()->back()->with('success', 'Campaign saved successfully!')->withInput();
+//     } elseif ($request->action == 'publish') {
+//         \App\Models\Campaign::create([
+//             'audience_id' => $data['audience'],
+//             'channel' => $data['channel'],
+//             'date' => $data['date'],
+//             'subject' => $data['subject'],
+//             'body' => $data['body'],
+//             'flag' => 1, // Set flag to 1 for 'publish'
+//         ]);
+
+//         return redirect()->back()->with('success', 'Campaign published successfully!')->withInput();
+//     }
+// }
+
+public function storeCampaign(Request $request)
 {
     // Validate the request data
     $data = $request->validate([
+        'campaign_name' => 'required|string|max:255',
         'audience' => 'required|exists:audiences,id',
         'channel' => 'required|in:email,whatsapp,sms',
-        'date' => 'required|date|after:today',
+        'date' => 'required|date_format:Y-m-d\TH:i|after:now',
         'subject' => 'required|string|max:255',
         'body' => 'required|string',
     ]);
 
-    // Determine the action (save or publish)
-    if ($request->action == 'save') {
-        // Save logic - flag is 0 for 'save'
-        \App\Models\Campaign::create([
-            'audience_id' => $data['audience'],
-            'channel' => $data['channel'],
-            'date' => $data['date'],
-            'subject' => $data['subject'],
-            'body' => $data['body'],
-            'flag' => 0, // Set flag to 0 for 'save'
-        ]);
+    // Determine the action and handle accordingly
+    switch ($request->action) {
+        case 'draft':
+            // Save as draft
+            \App\Models\Campaign::create([
+                'campaign_name' => $data['campaign_name'],
+                'audience_id' => $data['audience'],
+                'channel' => $data['channel'],
+                'date' => $data['date'],
+                'subject' => $data['subject'],
+                'body' => $data['body'],
+                'flag' => 0, // Draft
+            ]);
+            return redirect()->back()->with('success', 'Campaign saved as draft successfully!')->withInput();
 
-        return redirect()->back()->with('success', 'Campaign saved successfully!')->withInput();
-    } elseif ($request->action == 'publish') {
-        \App\Models\Campaign::create([
-            'audience_id' => $data['audience'],
-            'channel' => $data['channel'],
-            'date' => $data['date'],
-            'subject' => $data['subject'],
-            'body' => $data['body'],
-            'flag' => 1, // Set flag to 1 for 'publish'
-        ]);
+        case 'publish':
+            // Check if the selected date and time are at least 10 minutes in the future
+            $currentDateTime = \Carbon\Carbon::now();
+            $selectedDateTime = \Carbon\Carbon::parse($data['date']);
 
-        return redirect()->back()->with('success', 'Campaign published successfully!')->withInput();
+            if ($selectedDateTime->isToday() && $selectedDateTime->diffInMinutes($currentDateTime, false) < 10) {
+                return redirect()->back()->withErrors(['date' => 'The selected time must be at least 10 minutes in the future.'])->withInput();
+            }
+
+            // Save as published
+            \App\Models\Campaign::create([
+                'campaign_name' => $data['campaign_name'],
+                'audience_id' => $data['audience'],
+                'channel' => $data['channel'],
+                'date' => $data['date'],
+                'subject' => $data['subject'],
+                'body' => $data['body'],
+                'flag' => 1, // Published
+            ]);
+            return redirect()->back()->with('success', 'Campaign published successfully!')->withInput();
+
+        case 'send':
+            // Save and perform additional processing
+            \App\Models\Campaign::create([
+                'campaign_name' => $data['campaign_name'],
+                'audience_id' => $data['audience'],
+                'channel' => $data['channel'],
+                'date' => $data['date'],
+                'subject' => $data['subject'],
+                'body' => $data['body'],
+                'flag' => 2, // Sent
+            ]);
+
+            // Additional processing logic for sending
+            // For example, you might send notifications or emails here
+            // Example: dispatch(new SendCampaignJob($campaign));
+
+            return redirect()->back()->with('success', 'Campaign sent and processing started successfully!')->withInput();
+
+        default:
+            return redirect()->back()->withErrors(['action' => 'Invalid action selected.'])->withInput();
     }
 }
+
 
 
     // Method for POST /drop
@@ -249,7 +321,7 @@ class MarketauthmoduleController extends Controller
     // ! new changes
     public function allCampaign()
     {
-        $campaigns = Campaign::all();
+        $campaigns = Campaign::with('audience')->get();
 
         return view('frontend.campaigns', compact('campaigns'));
     }

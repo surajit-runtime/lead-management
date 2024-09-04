@@ -50,8 +50,8 @@
                                         @foreach ($campaigns as $campaign)
                                             <tr>
                                                 <td><input type="checkbox" class="select-row" value="{{ $campaign->id }}"></td> <!-- Row checkbox -->
-                                                <td>{{ $campaign->name }}</td>
-                                                <td>{{ $campaign->audience->name }}</td>
+                                                <td>{{ $campaign->campaign_name }}</td>
+                                                <td>{{ $campaign->audience->audience_name }}</td>
                                                 <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
                                                 <td>{{ ucfirst($campaign->channel) }}</td>
                                                 <td>{{ $campaign->subject }}</td>

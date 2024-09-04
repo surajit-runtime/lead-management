@@ -8304,3 +8304,9 @@
 [2024-09-04 10:04:30] development.INFO: Processing lead {"lead_id":13} 
 [2024-09-04 10:04:30] development.INFO: Processing lead {"lead_id":12} 
 [2024-09-04 10:04:30] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 10:43:31] development.INFO: Processing campaign {"campaign_id":1} 
+[2024-09-04 10:50:09] development.INFO: Processing campaign {"campaign_id":1} 
+[2024-09-04 10:51:22] development.INFO: Processing campaign {"campaign_id":1} 
+[2024-09-04 10:51:25] development.INFO: Processing campaign {"campaign_id":1} 
+[2024-09-04 10:51:26] development.INFO: Processing campaign {"campaign_id":1} 
+[2024-09-04 10:52:04] development.INFO: Processing campaign {"campaign_id":1} 

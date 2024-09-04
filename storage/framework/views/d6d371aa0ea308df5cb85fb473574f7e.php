@@ -48,8 +48,8 @@
                                         <?php $__currentLoopData = $campaigns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $campaign): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <tr>
                                                 <td><input type="checkbox" class="select-row" value="<?php echo e($campaign->id); ?>"></td> <!-- Row checkbox -->
-                                                <td><?php echo e($campaign->name); ?></td>
-                                                <td><?php echo e($campaign->audience->name); ?></td>
+                                                <td><?php echo e($campaign->campaign_name); ?></td>
+                                                <td><?php echo e($campaign->audience->audience_name); ?></td>
                                                 <td><?php echo e($campaign->date->format('Y-m-d H:i:s')); ?></td>
                                                 <td><?php echo e(ucfirst($campaign->channel)); ?></td>
                                                 <td><?php echo e($campaign->subject); ?></td>

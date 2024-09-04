@@ -13,6 +13,23 @@
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                             <h4 class="mb-sm-0 font-size-18">Make Campaign</h4>
+                            <!-- Display success message -->
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            <!-- Display error messages -->
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
@@ -33,10 +50,11 @@
                                 <form action="{{ route('storeCampaign') }}" method="POST">
                                     @csrf
 
-                                     <!-- Campaign Name Input -->
-                                     <div class="form-group mb-3">
+                                    <!-- Campaign Name Input -->
+                                    <div class="form-group mb-3">
                                         <label for="campaign_name">Campaign Name:</label>
-                                        <input type="text" id="campaign_name" name="campaign_name" class="form-control" required>
+                                        <input type="text" id="campaign_name" name="campaign_name" class="form-control"
+                                            required>
                                     </div>
 
 
@@ -78,12 +96,13 @@
                                             min="{{ \Carbon\Carbon::now()->addDay()->toDateString() }}" required>
                                     </div> --}}
 
-                                     <!-- Date and Time Selection -->
-                                     <div class="form-group mb-3">
+                                    <!-- Date and Time Selection -->
+                                    <div class="form-group mb-3">
                                         <label for="date">Date and Time:</label>
                                         <input type="datetime-local" id="date" name="date" class="form-control"
-                                            min="{{ \Carbon\Carbon::now()->addMinute()->format('Y-m-d\TH:i') }}" required>
+                                            min="{{ \Carbon\Carbon::now()->format('Y-m-d\TH:i') }}" required>
                                     </div>
+
 
 
                                     <!-- Template Heading -->
@@ -103,11 +122,14 @@
 
                                     <!-- Save and Publish Buttons -->
                                     <div class="form-group mb-3">
-                                        <button type="submit" name="action" value="save" class="btn btn-primary">Save
-                                            Drop</button>
+                                        <button type="submit" name="action" value="draft" class="btn btn-primary">Save
+                                            Draft</button>
                                         <button type="submit" name="action" value="publish"
                                             class="btn btn-success">Publish</button>
+                                        <button type="submit" name="action" value="send" class="btn btn-danger">Send
+                                            Now</button>
                                     </div>
+
                                 </form>
                             </div>
                         </div>
