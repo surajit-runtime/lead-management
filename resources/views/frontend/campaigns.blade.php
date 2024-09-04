@@ -33,15 +33,14 @@
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox" id="select-all"></th> <!-- Universal checkbox -->
+                                            <th>SR No</th>
                                             <th>Campaign Name</th>
                                             <th>Audience Name</th>
-                                            <th>Date</th>
                                             <th>Channel</th>
                                             <th>Subject</th>
-                                            <th>Success Status</th>
-                                            <th>Created At</th>
-                                            <th>Updated At</th>
+                                            <th>Body</th>
+                                            <th>Flag</th>
+                                            <th>Date</th>
                                         </tr>
                                     </thead>
 
@@ -49,20 +48,29 @@
                                         @php $count = 1; @endphp
                                         @foreach ($campaigns as $campaign)
                                             <tr>
-                                                <td><input type="checkbox" class="select-row" value="{{ $campaign->id }}"></td> <!-- Row checkbox -->
+                                                <td>{{ $count++ }}</td>
                                                 <td>{{ $campaign->campaign_name }}</td>
                                                 <td>{{ $campaign->audience->audience_name }}</td>
-                                                <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
                                                 <td>{{ ucfirst($campaign->channel) }}</td>
                                                 <td>{{ $campaign->subject }}</td>
-                                                <td>{{ $campaign->success_status ? 'Success' : 'Failed' }}</td>
-                                                <td>{{ $campaign->created_at->format('Y-m-d H:i:s') }}</td>
-                                                <td>{{ $campaign->updated_at->format('Y-m-d H:i:s') }}</td>
+                                                <td>{{ $campaign->body }}</td>
+                                                <td>
+                                                    @switch($campaign->flag)
+                                                        @case(0)
+                                                            Draft
+                                                            @break
+                                                        @case(1)
+                                                            Published
+                                                            @break
+                                                        @case(2)
+                                                            Sent Now
+                                                            @break
+                                                        @default
+                                                            Unknown
+                                                    @endswitch
+                                                </td>
+                                                <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
                                             </tr>
-                                            @php
-                                                $count++;
-                                                Log::info('Processing campaign', ['campaign_id' => $campaign->id]);
-                                            @endphp
                                         @endforeach
                                     </tbody>
                                 </table>

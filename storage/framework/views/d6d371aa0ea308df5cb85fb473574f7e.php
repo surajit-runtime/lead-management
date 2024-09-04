@@ -31,15 +31,14 @@
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox" id="select-all"></th> <!-- Universal checkbox -->
+                                            <th>SR No</th>
                                             <th>Campaign Name</th>
                                             <th>Audience Name</th>
-                                            <th>Date</th>
                                             <th>Channel</th>
                                             <th>Subject</th>
-                                            <th>Success Status</th>
-                                            <th>Created At</th>
-                                            <th>Updated At</th>
+                                            <th>Body</th>
+                                            <th>Flag</th>
+                                            <th>Date</th>
                                         </tr>
                                     </thead>
 
@@ -47,20 +46,29 @@
                                         <?php $count = 1; ?>
                                         <?php $__currentLoopData = $campaigns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $campaign): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <tr>
-                                                <td><input type="checkbox" class="select-row" value="<?php echo e($campaign->id); ?>"></td> <!-- Row checkbox -->
+                                                <td><?php echo e($count++); ?></td>
                                                 <td><?php echo e($campaign->campaign_name); ?></td>
                                                 <td><?php echo e($campaign->audience->audience_name); ?></td>
-                                                <td><?php echo e($campaign->date->format('Y-m-d H:i:s')); ?></td>
                                                 <td><?php echo e(ucfirst($campaign->channel)); ?></td>
                                                 <td><?php echo e($campaign->subject); ?></td>
-                                                <td><?php echo e($campaign->success_status ? 'Success' : 'Failed'); ?></td>
-                                                <td><?php echo e($campaign->created_at->format('Y-m-d H:i:s')); ?></td>
-                                                <td><?php echo e($campaign->updated_at->format('Y-m-d H:i:s')); ?></td>
+                                                <td><?php echo e($campaign->body); ?></td>
+                                                <td>
+                                                    <?php switch($campaign->flag):
+                                                        case (0): ?>
+                                                            Draft
+                                                            <?php break; ?>
+                                                        <?php case (1): ?>
+                                                            Published
+                                                            <?php break; ?>
+                                                        <?php case (2): ?>
+                                                            Sent Now
+                                                            <?php break; ?>
+                                                        <?php default: ?>
+                                                            Unknown
+                                                    <?php endswitch; ?>
+                                                </td>
+                                                <td><?php echo e($campaign->date->format('Y-m-d H:i:s')); ?></td>
                                             </tr>
-                                            <?php
-                                                $count++;
-                                                Log::info('Processing campaign', ['campaign_id' => $campaign->id]);
-                                            ?>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
                                 </table>
