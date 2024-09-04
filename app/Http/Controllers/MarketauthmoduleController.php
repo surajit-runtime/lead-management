@@ -138,7 +138,7 @@ class MarketauthmoduleController extends Controller
         }
     }
 
-    public function createCampaign(Request $request)
+    public function careateAudience(Request $request)
     {
         $audienceName = $request->input('audience_name');
 
@@ -151,7 +151,7 @@ class MarketauthmoduleController extends Controller
             'lead_ids' => $request->input('lead_ids')
         ]);
 
-        return response()->json(['success' => 'Campaign created successfully']);
+        return response()->json(['success' => 'Audience created successfully']);
     }
 
     public function filteredAllLeadList(Request $request)

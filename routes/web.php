@@ -100,6 +100,8 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
 
     // Audience Routes
     Route::get('/audience', [MarketauthmoduleController::class, 'handleAudience'])->name('handleAudience');
+    Route::post('/audience', [MarketauthmoduleController::class, 'careateAudience'])->name('careateAudience');
+
     Route::get('/lead-list', [MarketauthmoduleController::class, 'handleLeadList'])->name('handleLeadList');
     Route::post('/lead-list', [MarketauthmoduleController::class, 'filteredAllLeadList'])->name('filteredAllLeadList');
 

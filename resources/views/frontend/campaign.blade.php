@@ -33,6 +33,13 @@
                                 <form action="{{ route('storeCampaign') }}" method="POST">
                                     @csrf
 
+                                     <!-- Campaign Name Input -->
+                                     <div class="form-group mb-3">
+                                        <label for="campaign_name">Campaign Name:</label>
+                                        <input type="text" id="campaign_name" name="campaign_name" class="form-control" required>
+                                    </div>
+
+
                                     <!-- Audience Dropdown -->
                                     <div class="form-group mb-3">
                                         <label for="audience">Select Audience:</label>
@@ -65,10 +72,17 @@
                                     </div>
 
                                     <!-- Date Selection -->
-                                    <div class="form-group mb-3">
+                                    {{-- <div class="form-group mb-3">
                                         <label for="date">Date:</label>
                                         <input type="date" id="date" name="date" class="form-control"
                                             min="{{ \Carbon\Carbon::now()->addDay()->toDateString() }}" required>
+                                    </div> --}}
+
+                                     <!-- Date and Time Selection -->
+                                     <div class="form-group mb-3">
+                                        <label for="date">Date and Time:</label>
+                                        <input type="datetime-local" id="date" name="date" class="form-control"
+                                            min="{{ \Carbon\Carbon::now()->addMinute()->format('Y-m-d\TH:i') }}" required>
                                     </div>
 
 

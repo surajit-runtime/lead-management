@@ -26,11 +26,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row align-items-center justify-content-between">
                     <form action="{{ route('filteredAllLeadList') }}" method="POST" enctype="multipart/form-data"
-                        class="d-flex align-items-center">
+                        class="d-flex align-items-center w-auto">
                         @csrf
-                        <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
+                        <div class="form-group custom-select" style="margin-right: 20px;">
+                            <label for="call_center" class="form-label">Call Center</label>
+
                             <select id="call_center" name="call_center" required
                                 data-pristine-required-message="Please select a call Center"
                                 class="form-control form-select">
@@ -46,7 +48,9 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
+                        <div class="form-group custom-select" style="margin-right: 20px;">
+                            <label for="lead_status" class="form-label">Lead Status</label>
+
                             <select id="lead_status" name="lead_status" required
                                 data-pristine-required-message="Please select a Lead Status"
                                 class="form-control form-select">
@@ -62,7 +66,9 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
+                        <div class="form-group custom-select" style="margin-right: 20px;">
+                            <label for="lead_type" class="form-label">Lead Type</label>
+
                             <select id="lead_type" name="lead_type" required
                                 data-pristine-required-message="Please select a Lead Type" class="form-control form-select">
                                 <option value="" disabled selected>Select Lead Type</option>
@@ -74,12 +80,17 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="ms-3" style="margin-top: -13px;">
+                        <div class="ms-3">
                             <button type="submit" class="btn btn-primary">Filter</button>
                         </div>
                     </form>
+                    <div class="w-auto">
+                        <button id="create-campaign" class="btn btn-primary">Create Audience</button>
+
+                    </div>
                     {{-- <a href="http://24.199.103.172/Example_LeadUpload_and_Convert_to_CSV.xlsx" download="Example_Format_CSV" class="btn btn-primary">Download Format In Excel</a> --}}
                 </div>
+
                 {{-- <div class="row">
                             <form action="{{ route('allLeadAdminShowPageRequest') }}" method="POST" enctype="multipart/form-data" class="d-flex align-items-center">
                                 @csrf
@@ -167,8 +178,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <button id="create-campaign" style="float: right;" class="btn btn-primary mt-3">Create
-                                    Audience</button>
+
                                     <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" style="display: flex; align-items: center; min-height: calc(100% - 1.75rem);">
                                             <div class="modal-content">
@@ -270,7 +280,7 @@
 
                 // Send AJAX request to the server
                 $.ajax({
-                    url: '{{ route('createCampaign') }}', // Change this to your route
+                    url: '{{ route('careateAudience') }}', // Change this to your route
                     method: 'POST',
                     data: {
                         _token: '{{ csrf_token() }}',

@@ -20,6 +20,7 @@ class Campaign extends Model
 
     // Define the fillable attributes for mass assignment
     protected $fillable = [
+        'campaign_name',
         'audience_id',
         'date',
         'channel',
