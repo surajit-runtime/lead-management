@@ -33,7 +33,7 @@ class Campaign extends Model
     // Define the attributes that should be cast to native types
     protected $casts = [
         'date' => 'datetime', // Cast to datetime for the 'date' column
-        'flag' => 'boolean',
+        'flag' => 'string',
         'success_status' => 'boolean',
     ];
 

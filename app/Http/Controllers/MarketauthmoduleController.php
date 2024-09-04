@@ -72,29 +72,24 @@ public function storeCampaign(Request $request)
     // Determine the action and handle accordingly
     switch ($request->action) {
         case 'draft':
-            // Save as draft
-            \App\Models\Campaign::create([
+            Campaign::create([
                 'campaign_name' => $data['campaign_name'],
                 'audience_id' => $data['audience'],
                 'channel' => $data['channel'],
                 'date' => $data['date'],
                 'subject' => $data['subject'],
                 'body' => $data['body'],
-                'flag' => 0, // Draft
+                'flag' => 0,
             ]);
             return redirect()->back()->with('success', 'Campaign saved as draft successfully!')->withInput();
-
         case 'publish':
-            // Check if the selected date and time are at least 10 minutes in the future
             $currentDateTime = \Carbon\Carbon::now();
             $selectedDateTime = \Carbon\Carbon::parse($data['date']);
 
             if ($selectedDateTime->isToday() && $selectedDateTime->diffInMinutes($currentDateTime, false) < 10) {
                 return redirect()->back()->withErrors(['date' => 'The selected time must be at least 10 minutes in the future.'])->withInput();
             }
-
-            // Save as published
-            \App\Models\Campaign::create([
+            Campaign::create([
                 'campaign_name' => $data['campaign_name'],
                 'audience_id' => $data['audience'],
                 'channel' => $data['channel'],
@@ -104,10 +99,8 @@ public function storeCampaign(Request $request)
                 'flag' => 1, // Published
             ]);
             return redirect()->back()->with('success', 'Campaign published successfully!')->withInput();
-
         case 'send':
-            // Save and perform additional processing
-            \App\Models\Campaign::create([
+            Campaign::create([
                 'campaign_name' => $data['campaign_name'],
                 'audience_id' => $data['audience'],
                 'channel' => $data['channel'],
@@ -116,22 +109,11 @@ public function storeCampaign(Request $request)
                 'body' => $data['body'],
                 'flag' => 2, // Sent
             ]);
-
-            // Additional processing logic for sending
-            // For example, you might send notifications or emails here
-            // Example: dispatch(new SendCampaignJob($campaign));
-
             return redirect()->back()->with('success', 'Campaign sent and processing started successfully!')->withInput();
-
         default:
             return redirect()->back()->withErrors(['action' => 'Invalid action selected.'])->withInput();
     }
 }
-
-
-
-    // Method for POST /drop
-
 
     // Method for POST /lead-list
     public function handleLeadList(Request $request)

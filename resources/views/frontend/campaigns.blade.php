@@ -47,27 +47,28 @@
                                     <tbody>
                                         @php $count = 1; @endphp
                                         @foreach ($campaigns as $campaign)
+                                            {{-- {{dd($campaign)}} --}}
                                             <tr>
                                                 <td>{{ $count++ }}</td>
                                                 <td>{{ $campaign->campaign_name }}</td>
                                                 <td>{{ $campaign->audience->audience_name }}</td>
                                                 <td>{{ ucfirst($campaign->channel) }}</td>
                                                 <td>{{ $campaign->subject }}</td>
-                                                <td>{{ $campaign->body }}</td>
+                                                <td>{!! $campaign->body !!}</td>
                                                 <td>
                                                     @switch($campaign->flag)
-                                                        @case(0)
-                                                            Draft
-                                                            @break
-                                                        @case(1)
-                                                            Published
-                                                            @break
-                                                        @case(2)
-                                                            Sent Now
-                                                            @break
-                                                        @default
-                                                            Unknown
-                                                    @endswitch
+                                                    @case(0)
+                                                        Draft
+                                                        @break
+                                                    @case(1)
+                                                        Published
+                                                        @break
+                                                    @case(2)
+                                                        Sent
+                                                        @break
+                                                    @default
+                                                        Unknown
+                                                @endswitch
                                                 </td>
                                                 <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
                                             </tr>

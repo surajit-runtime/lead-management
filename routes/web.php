@@ -119,6 +119,7 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     route::get('/audience/{id}/leads', [AudienceController::class, 'showLeads'])->name('audience.leads');
     Route::post('/audience/{id}/leads/{leadId}/remove', [AudienceController::class, 'removeLead'])->name('audience.leads.remove');
 });
+
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //---------------------------------------------------------------------------------------------Role = 5--------------------------------------------------------

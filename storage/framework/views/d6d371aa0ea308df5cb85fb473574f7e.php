@@ -45,27 +45,28 @@
                                     <tbody>
                                         <?php $count = 1; ?>
                                         <?php $__currentLoopData = $campaigns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $campaign): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            
                                             <tr>
                                                 <td><?php echo e($count++); ?></td>
                                                 <td><?php echo e($campaign->campaign_name); ?></td>
                                                 <td><?php echo e($campaign->audience->audience_name); ?></td>
                                                 <td><?php echo e(ucfirst($campaign->channel)); ?></td>
                                                 <td><?php echo e($campaign->subject); ?></td>
-                                                <td><?php echo e($campaign->body); ?></td>
+                                                <td><?php echo $campaign->body; ?></td>
                                                 <td>
                                                     <?php switch($campaign->flag):
-                                                        case (0): ?>
-                                                            Draft
-                                                            <?php break; ?>
-                                                        <?php case (1): ?>
-                                                            Published
-                                                            <?php break; ?>
-                                                        <?php case (2): ?>
-                                                            Sent Now
-                                                            <?php break; ?>
-                                                        <?php default: ?>
-                                                            Unknown
-                                                    <?php endswitch; ?>
+                                                    case (0): ?>
+                                                        Draft
+                                                        <?php break; ?>
+                                                    <?php case (1): ?>
+                                                        Published
+                                                        <?php break; ?>
+                                                    <?php case (2): ?>
+                                                        Sent
+                                                        <?php break; ?>
+                                                    <?php default: ?>
+                                                        Unknown
+                                                <?php endswitch; ?>
                                                 </td>
                                                 <td><?php echo e($campaign->date->format('Y-m-d H:i:s')); ?></td>
                                             </tr>
