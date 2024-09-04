@@ -80,11 +80,11 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="ms-3">
+                        <div class="ms-3"  style="margin-top: auto">
                             <button type="submit" class="btn btn-primary">Filter</button>
                         </div>
                     </form>
-                    <div class="w-auto">
+                    <div class="w-auto"  style="margin-top: auto">
                         <button id="create-campaign" class="btn btn-primary">Create Audience</button>
 
                     </div>

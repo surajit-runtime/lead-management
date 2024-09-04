@@ -9775,3 +9775,656 @@
 [2024-09-04 13:58:13] development.INFO: Processing lead {"lead_id":13} 
 [2024-09-04 13:58:13] development.INFO: Processing lead {"lead_id":12} 
 [2024-09-04 13:58:13] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 14:05:11] development.ERROR: Route [allCampaignsFilter] not defined. {"view":{"view":"C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\campaigns.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-186072127 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#414</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-186072127\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","campaigns":"<pre class=sf-dump id=sf-dump-1874639379 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#453</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"App\\Models\\Campaign
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\Models</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Campaign</span> {<a class=sf-dump-ref>#459</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"9 characters\">campaigns</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+      +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+      +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+      +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:12</span> [ &#8230;12]
+      #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:12</span> [ &#8230;12]
+      #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:4</span> [ &#8230;4]
+      #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">attributeCastCache</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+      +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+      +<span class=sf-dump-public title=\"Public property\">usesUniqueIds</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:8</span> [ &#8230;8]
+      #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">forceDeleting</span>: <span class=sf-dump-const>false</span>
+    </samp>}
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">escapeWhenCastingToString</span>: <span class=sf-dump-const>false</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1874639379\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [allCampaignsFilter] not defined. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:479)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(811): Illuminate\\Routing\\UrlGenerator->route('allCampaignsFil...', Array, true)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\campaigns.blade.php(31): route('allCampaignsFil...')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#58 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [allCampaignsFilter] not defined. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:479)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(811): Illuminate\\Routing\\UrlGenerator->route('allCampaignsFil...', Array, true)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\storage\\framework\\views\\d6d371aa0ea308df5cb85fb473574f7e.php(29): route('allCampaignsFil...')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#58 {main}
+"} 
+[2024-09-04 14:07:39] development.ERROR: View [your-view-name] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [your-view-name] not found. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:137)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('your-view-name', Array)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(137): Illuminate\\View\\FileViewFinder->find('your-view-name')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1020): Illuminate\\View\\Factory->make('your-view-name', Array, Array)
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Controllers\\MarketauthmoduleController.php(322): view('your-view-name', Array)
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MarketauthmoduleController->campaignFilter(Object(Illuminate\\Http\\Request))
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('campaignFilter', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MarketauthmoduleController), 'campaignFilter')
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#53 {main}
+"} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 14:14:00] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 14:33:15] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 14:37:13] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 15:57:06] development.ERROR: No arguments expected for "vendor:publish" command, got "–tag=larapex-charts-config". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"vendor:publish\" command, got \"–tag=larapex-charts-config\". at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('\\xE2\\x80\\x93tag=larapex-...')
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('\\xE2\\x80\\x93tag=larapex-...', true)
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\VendorPublishCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2024-09-04 15:59:20] development.ERROR: No arguments expected for "vendor:publish" command, got "–tag=larapex-charts-config". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"vendor:publish\" command, got \"–tag=larapex-charts-config\". at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('\\xE2\\x80\\x93tag=larapex-...')
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('\\xE2\\x80\\x93tag=larapex-...', true)
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\VendorPublishCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2024-09-04 15:59:40] development.ERROR: No arguments expected for "vendor:publish" command, got "–-tag=larapex-charts-config". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"vendor:publish\" command, got \"–-tag=larapex-charts-config\". at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('\\xE2\\x80\\x93-tag=larapex...')
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('\\xE2\\x80\\x93-tag=larapex...', true)
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\VendorPublishCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2024-09-04 16:10:11] development.ERROR: View [expenses.index] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [expenses.index] not found. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:137)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('expenses.index', Array)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Factory.php(137): Illuminate\\View\\FileViewFinder->find('expenses.index')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1020): Illuminate\\View\\Factory->make('expenses.index', Array, Array)
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Controllers\\CampaignChartController.php(15): view('expenses.index', Array)
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\CampaignChartController->index(Object(App\\Charts\\CampaignChart))
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('index', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\CampaignChartController), 'index')
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#53 {main}
+"} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:00:39] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 17:04:45] development.ERROR: Route [campaignPage] not defined. {"view":{"view":"C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\layouts\\header.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1635079069 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#418</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1635079069\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","chart":"<pre class=sf-dump id=sf-dump-1128752912 data-indent-pad=\"  \"><span class=sf-dump-note>ArielMejiaDev\\LarapexCharts\\BarChart</span> {<a class=sf-dump-ref>#437</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">id</span>: \"<span class=sf-dump-str title=\"25 characters\">cpfjvibhrexwskyozntmqalug</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">title</span>: \"<span class=sf-dump-str title=\"19 characters\">Campaigns Per Month</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">subtitle</span>: \"<span class=sf-dump-str title=\"39 characters\">Number of campaigns created each month.</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">subtitlePosition</span>: \"<span class=sf-dump-str title=\"4 characters\">left</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">type</span>: \"<span class=sf-dump-str title=\"3 characters\">bar</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">labels</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">fontFamily</span>: \"<span class=sf-dump-str title=\"28 characters\">Helvetica, Arial, sans-serif</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">foreColor</span>: \"<span class=sf-dump-str title=\"7 characters\">#373d3f</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">dataset</span>: \"<span class=sf-dump-str title=\"37 characters\">[{&quot;name&quot;:&quot;Campaigns&quot;,&quot;data&quot;:[2,1,1]}]</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">height</span>: <span class=sf-dump-num>500</span>
+  #<span class=sf-dump-protected title=\"Protected property\">width</span>: \"<span class=sf-dump-str title=\"4 characters\">100%</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">colors</span>: \"<span class=sf-dump-str title=\"11 characters\">[&quot;#1E3A8A&quot;]</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">horizontal</span>: \"<span class=sf-dump-str title=\"20 characters\">{&quot;horizontal&quot;:false}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">xAxis</span>: \"<span class=sf-dump-str title=\"49 characters\">[&quot;September 2024&quot;,&quot;October 2024&quot;,&quot;December 2024&quot;]</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">grid</span>: \"<span class=sf-dump-str title=\"14 characters\">{&quot;show&quot;:false}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">markers</span>: \"<span class=sf-dump-str title=\"14 characters\">{&quot;show&quot;:false}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">stacked</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">showLegend</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">stroke</span>: \"\"
+  #<span class=sf-dump-protected title=\"Protected property\">toolbar</span>: \"<span class=sf-dump-str title=\"14 characters\">{&quot;show&quot;:false}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">zoom</span>: \"<span class=sf-dump-str title=\"16 characters\">{&quot;enabled&quot;:true}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">dataLabels</span>: \"<span class=sf-dump-str title=\"17 characters\">{&quot;enabled&quot;:false}</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">theme</span>: \"<span class=sf-dump-str title=\"5 characters\">light</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">sparkline</span>: \"<span class=sf-dump-str title=\"17 characters\">{&quot;enabled&quot;:false}</span>\"
+  -<span class=sf-dump-private title=\"Private property defined in class:&#10;`ArielMejiaDev\\LarapexCharts\\LarapexChart`\">chartLetters</span>: \"<span class=sf-dump-str title=\"26 characters\">abcdefghijklmnopqrstuvwxyz</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">options</span>: <span class=sf-dump-const>null</span>
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1128752912\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [campaignPage] not defined. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:479)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(811): Illuminate\\Routing\\UrlGenerator->route('campaignPage', Array, true)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\layouts\\header.blade.php(1161): route('campaignPage')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\layouts\\main.blade.php(1): Illuminate\\View\\View->render()
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\resources\\views\\frontend\\charts\\index.blade.php(19): Illuminate\\View\\View->render()
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#53 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#54 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#69 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#70 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#71 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#72 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#73 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#74 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [campaignPage] not defined. at C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:479)
+[stacktrace]
+#0 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(811): Illuminate\\Routing\\UrlGenerator->route('campaignPage', Array, true)
+#1 C:\\Runtime\\Lead Management Project files\\Lead management\\storage\\framework\\views\\656fdbde5795f27b13a8fbfe81292734.php(501): route('campaignPage')
+#2 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#3 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#5 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#6 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#7 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#8 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#9 C:\\Runtime\\Lead Management Project files\\Lead management\\storage\\framework\\views\\7bb98986403fefb2f272e1b44cde22cf.php(1): Illuminate\\View\\View->render()
+#10 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#11 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#13 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#14 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#15 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#16 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#17 C:\\Runtime\\Lead Management Project files\\Lead management\\storage\\framework\\views\\98803001322ba99b2e218da4818b4337.php(21): Illuminate\\View\\View->render()
+#18 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): require('C:\\\\Runtime\\\\Lead...')
+#19 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#20 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Runtime\\\\Lead...', Array)
+#21 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(72): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Runtime\\\\Lead...', Array)
+#22 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(195): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Runtime\\\\Lead...', Array)
+#23 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(178): Illuminate\\View\\View->getContents()
+#24 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(147): Illuminate\\View\\View->renderContents()
+#25 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#26 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#27 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(911): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#28 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(878): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#29 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#30 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\RoleAccess.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\RoleAccess->handle(Object(Illuminate\\Http\\Request), Object(Closure), '1')
+#33 C:\\Runtime\\Lead Management Project files\\Lead management\\app\\Http\\Middleware\\AdminAuth.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\AdminAuth->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#43 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#51 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#52 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#53 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#54 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#69 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#70 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#71 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#72 C:\\Runtime\\Lead Management Project files\\Lead management\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#73 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
+#74 {main}
+"} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:06:58] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:18:04] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:25:39] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:26:42] development.INFO: Processing lead {"lead_id":11} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-04 17:27:05] development.INFO: Processing lead {"lead_id":11} 

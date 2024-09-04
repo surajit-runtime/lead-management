@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AudienceController;
+use App\Http\Controllers\CampaignChartController;
+use App\Http\Controllers\CampaignController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -110,14 +112,21 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::get('/campaign', [MarketauthmoduleController::class, 'showCampaignPage'])->name('campaignPage');
     Route::post('/campaign', [MarketauthmoduleController::class, 'storeCampaign'])->name('storeCampaign');
 
-    Route::get('/all-campaign', [MarketauthmoduleController::class, 'allCampaign'])->name('allCampaign');
-    Route::get('/campaigns/drafts', [MarketauthmoduleController::class, 'showDraftCampaigns'])->name('campaignDrafts');
-    Route::get('/campaigns/published', [MarketauthmoduleController::class, 'showPublishedCampaigns'])->name('publishCampaigns');
-    Route::get('/campaigns/sent', [MarketauthmoduleController::class, 'showSentCampaigns'])->name('sentCampaigns');
+
+    route::get('/campaigns', [CampaignController::class, 'campaignFilter'])->name('allCampaignsFilter');
+    Route::get('/all-campaign', [CampaignController::class, 'allCampaign'])->name('allCampaign');
+    Route::get('/campaigns/drafts', [CampaignController::class, 'showDraftCampaigns'])->name('campaignDrafts');
+    Route::get('/campaigns/published', [CampaignController::class, 'showPublishedCampaigns'])->name('publishCampaigns');
+    Route::get('/campaigns/sent', [CampaignController::class, 'showSentCampaigns'])->name('sentCampaigns');
 
     // audience leads
     route::get('/audience/{id}/leads', [AudienceController::class, 'showLeads'])->name('audience.leads');
     Route::post('/audience/{id}/leads/{leadId}/remove', [AudienceController::class, 'removeLead'])->name('audience.leads.remove');
+
+
+    // cahrts
+    Route::get('/campaign/graph', [CampaignChartController::class, 'index'])->name('campaign.graph');
+
 });
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

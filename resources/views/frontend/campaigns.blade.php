@@ -12,12 +12,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18">All Campaigns</h4>
+                            <h4 class="mb-sm-0 font-size-18">{{ $heading }}</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
                                     <li class="breadcrumb-item"><a href="javascript: void(0);">Campaigns</a></li>
-                                    <li class="breadcrumb-item active">All Campaigns</li>
+                                    <li class="breadcrumb-item active">{{ $heading }}</li>
                                 </ol>
                             </div>
 
@@ -25,6 +25,27 @@
                     </div>
                 </div>
                 <!-- end page title -->
+
+                 <!-- Start filter form -->
+                 @if($showFilter)
+                 <div class="row">
+                     <form action="{{ route('allCampaignsFilter') }}" method="GET" class="d-flex align-items-center">
+                         @csrf
+                         <div class="form-group mb-3 custom-select" style="margin-right: 20px;">
+                             <select id="campaign_flag" name="campaign_flag" class="form-control form-select">
+                                 <option value="" disabled selected>Select Campaign Status</option>
+                                 <option value="0" {{ request('campaign_flag') == '0' ? 'selected' : '' }}>Draft</option>
+                                 <option value="1" {{ request('campaign_flag') == '1' ? 'selected' : '' }}>Published</option>
+                                 <option value="2" {{ request('campaign_flag') == '2' ? 'selected' : '' }}>Sent</option>
+                             </select>
+                         </div>
+                         <div class="ms-3" style="margin-top: -13px;">
+                             <button type="submit" class="btn btn-primary">Filter</button>
+                         </div>
+                     </form>
+                 </div>
+             @endif
+             <!-- End filter form -->
 
                 <div class="row">
                     <div class="col-12">
