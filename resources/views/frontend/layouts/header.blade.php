@@ -95,6 +95,13 @@ require_once ("./assets/lang/" . $lang . ".php");
 
 </script>
 
+<style>
+    .chart-container {
+        height: 300px; /* Ensure all charts have the same height */
+        margin-bottom: 30px; /* Space between charts */
+    }
+</style>
+
 </head>
 
 <body>

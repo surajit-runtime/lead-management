@@ -130,7 +130,7 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
 
 
     // cahrts
-    Route::get('/campaign/graph', [CampaignChartController::class, 'index'])->name('campaign.graph');
+    Route::get('/campaign/graph', [CampaignChartController::class, 'showDashboard'])->name('campaign.graph');
 
 });
 
