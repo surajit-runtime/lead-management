@@ -1,12 +1,9 @@
 <?php $__env->startSection('main-container'); ?>
-<!-- ============================================================== -->
-<!-- Start right Content here -->
-<!-- ============================================================== -->
 <div class="main-content">
     <div class="page-content">
         <div class="container-fluid">
 
-            <!-- start page title -->
+            <!-- Start page title -->
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -19,11 +16,10 @@
                                 <li class="breadcrumb-item active">Leads</li>
                             </ol>
                         </div>
-
                     </div>
                 </div>
             </div>
-            <!-- end page title -->
+            <!-- End page title -->
 
             <div class="row">
                 <div class="col-12">
@@ -35,52 +31,79 @@
 
                                 </div>
                             <?php endif; ?>
-                            <table class="table table-bordered dt-responsive nowrap w-100">
-                                <thead>
-                                    <tr>
-                                        <th>S.No</th>
-                                        <th>Lead Name</th>
-                                        <th>Mobile</th>
-                                        <th>Email</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
 
-                                <tbody>
-                                    <?php $count = 1; ?>
-                                    <?php $__currentLoopData = $leads; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lead): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <!-- Move the "Remove Selected Leads" button to the top -->
+                            <form action="<?php echo e(route('audience.leads.remove-multiple', $audience->id)); ?>" method="POST" id="removeLeadsForm">
+                                <?php echo csrf_field(); ?>
+                                <button type="submit" class="btn btn-danger mb-2">Remove Selected Leads</button>
+
+                                <table class="table table-bordered dt-responsive nowrap w-100">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo e($count); ?></td>
-                                            <td><?php echo e($lead->first_name); ?> <?php echo e($lead->last_name); ?></td>
-                                            <td><?php echo e($lead->mobile); ?></td>
-                                            <td><?php echo e($lead->email); ?></td>
-                                            <td>
-                                                <form action="<?php echo e(route('audience.leads.remove', [$audience->id, $lead->id])); ?>" method="POST">
-                                                    <?php echo csrf_field(); ?>
-                                                    <button type="submit" class="btn btn-danger btn-sm">Remove</button>
-                                                </form>
-                                            </td>
+                                            <th><input type="checkbox" id="select-all"></th>
+                                            <th>S.No</th>
+                                            <th>Lead Name</th>
+                                            <th>Mobile</th>
+                                            <th>Email</th>
+                                            <th>Action</th>
                                         </tr>
-                                        <?php $count++; ?>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+
+                                    <tbody>
+                                        <?php $count = 1; ?>
+                                        <?php $__currentLoopData = $leads; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lead): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <tr>
+                                                <td><input type="checkbox" name="lead_ids[]" value="<?php echo e($lead->id); ?>" class="lead-checkbox"></td>
+                                                <td><?php echo e($count); ?></td>
+                                                <td><?php echo e($lead->first_name); ?> <?php echo e($lead->last_name); ?></td>
+                                                <td><?php echo e($lead->mobile); ?></td>
+                                                <td><?php echo e($lead->email); ?></td>
+                                                <td>
+                                                    <form action="<?php echo e(route('audience.leads.remove', [$audience->id, $lead->id])); ?>" method="POST">
+                                                        <?php echo csrf_field(); ?>
+                                                        <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <?php $count++; ?>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                     </div>
-                    <!-- end card -->
-                </div> <!-- end col -->
-            </div><!-- end row -->
+                    <!-- End card -->
+                </div> <!-- End col -->
+            </div><!-- End row -->
 
-        </div> <!-- container-fluid -->
+        </div> <!-- Container-fluid -->
     </div>
     <!-- End Page-content -->
 </div>
-<!-- end main content -->
+<!-- End main content -->
 
 <script>
     $(document).ready(function() {
+        const leadCheckboxes = $('.lead-checkbox');
+        const selectAllCheckbox = $('#select-all');
+
+        // Initialize DataTable
         $('.table').DataTable({
             lengthChange: true,
+        });
+
+        // Select all checkboxes when "Select All" checkbox is clicked
+        selectAllCheckbox.click(function() {
+            leadCheckboxes.prop('checked', this.checked);
+        });
+
+        // Update "Select All" checkbox based on individual checkbox selection
+        leadCheckboxes.click(function() {
+            if (leadCheckboxes.length === $('.lead-checkbox:checked').length) {
+                selectAllCheckbox.prop('checked', true); // All checkboxes are selected
+            } else {
+                selectAllCheckbox.prop('checked', false); // Not all checkboxes are selected
+            }
         });
     });
 </script>

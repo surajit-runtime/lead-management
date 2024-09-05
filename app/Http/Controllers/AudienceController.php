@@ -32,4 +32,27 @@ class AudienceController extends Controller
         }
         return redirect()->route('audience.leads', $id)->with('status', 'Lead removed successfully!');
     }
+
+    public function removeMultiple(Request $request, $audienceId)
+    {
+        $leadIds = $request->input('lead_ids');
+
+        $audience = Audience::findOrFail($audienceId);
+
+        if (!empty($leadIds)) {
+            $audienceLeadIds = $audience->lead_ids;
+
+            foreach ($leadIds as $leadId) {
+                if (($key = array_search($leadId, $audienceLeadIds)) !== false) {
+                    unset($audienceLeadIds[$key]);
+                }
+            }
+            $audience->lead_ids = array_values($audienceLeadIds);
+            $audience->save();
+
+            return redirect()->back()->with('status', 'Selected leads have been removed from the audience.');
+        } else {
+            return redirect()->back()->with('status', 'No leads selected for removal.');
+        }
+    }
 }

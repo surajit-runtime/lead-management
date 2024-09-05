@@ -122,6 +122,8 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     // audience leads
     route::get('/audience/{id}/leads', [AudienceController::class, 'showLeads'])->name('audience.leads');
     Route::post('/audience/{id}/leads/{leadId}/remove', [AudienceController::class, 'removeLead'])->name('audience.leads.remove');
+    Route::post('/audience/{audience}/leads/remove-multiple', [AudienceController::class, 'removeMultiple'])->name('audience.leads.remove-multiple');
+
 
 
     // cahrts
