@@ -69,13 +69,13 @@
                                             <th>Body</th>
                                             <th>Flag</th>
                                             <th>Date</th>
+                                            <th>Actions</th> <!-- Add Actions column -->
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <?php $count = 1; ?>
                                         <?php $__currentLoopData = $campaigns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $campaign): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            
                                             <tr>
                                                 <td><?php echo e($count++); ?></td>
                                                 <td><?php echo e($campaign->campaign_name); ?></td>
@@ -102,6 +102,10 @@
                                                     <?php endswitch; ?>
                                                 </td>
                                                 <td><?php echo e($campaign->date->format('Y-m-d H:i:s')); ?></td>
+                                                <td>
+                                                    <!-- Add Edit Button -->
+                                                    <a href="<?php echo e(route('editCampaign', $campaign->id)); ?>" class="btn btn-sm btn-primary">Edit</a>
+                                                </td>
                                             </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>

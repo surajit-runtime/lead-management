@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Campaign;
+use App\Models\Audience;
 
 class CampaignController extends Controller
 {
@@ -57,5 +58,36 @@ class CampaignController extends Controller
         $heading = 'Filtered Campaigns'; // Dynamic heading
         $showFilter = true; // Show filter form
         return view('frontend.campaigns', compact('campaigns', 'heading', 'showFilter'));
+    }
+
+    public function edit($id)
+    {
+        $campaign = Campaign::find($id);
+        $audiences = Audience::all(); // Fetch all audiences for the dropdown
+        return view('frontend.editCampaign', compact('campaign', 'audiences'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'campaign_name' => 'required',
+            'audience' => 'required',
+            'channel' => 'required',
+            'subject' => 'required',
+            'body' => 'required',
+            'date' => 'required',
+        ]);
+
+        $campaign = Campaign::find($id);
+        $campaign->campaign_name = $request->campaign_name;
+        $campaign->audience_id = $request->audience;
+        $campaign->channel = $request->channel;
+        $campaign->subject = $request->subject;
+        $campaign->body = $request->body;
+        $campaign->date = $request->date;
+        $campaign->flag = $request->action == 'publish' ? 1 : ($request->action == 'send' ? 2 : 0);
+        $campaign->save();
+
+        return redirect()->route('allCampaign')->with('success', 'Campaign updated successfully');
     }
 }

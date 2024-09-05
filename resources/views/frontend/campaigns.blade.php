@@ -71,13 +71,13 @@
                                             <th>Body</th>
                                             <th>Flag</th>
                                             <th>Date</th>
+                                            <th>Actions</th> <!-- Add Actions column -->
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         @php $count = 1; @endphp
                                         @foreach ($campaigns as $campaign)
-                                            {{-- {{dd($campaign)}} --}}
                                             <tr>
                                                 <td>{{ $count++ }}</td>
                                                 <td>{{ $campaign->campaign_name }}</td>
@@ -104,6 +104,10 @@
                                                     @endswitch
                                                 </td>
                                                 <td>{{ $campaign->date->format('Y-m-d H:i:s') }}</td>
+                                                <td>
+                                                    <!-- Add Edit Button -->
+                                                    <a href="{{ route('editCampaign', $campaign->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

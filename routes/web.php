@@ -119,6 +119,9 @@ Route::group(['middleware' => ['AdminAuth', 'role.access:1']], function () {
     Route::get('/campaigns/published', [CampaignController::class, 'showPublishedCampaigns'])->name('publishCampaigns');
     Route::get('/campaigns/sent', [CampaignController::class, 'showSentCampaigns'])->name('sentCampaigns');
 
+    route::get('/campaigns/{id}/edit', [CampaignController::class, 'edit'])->name('editCampaign');
+    Route::post('/campaigns/{id}', [CampaignController::class, 'update'])->name('updateCampaign');
+
     // audience leads
     route::get('/audience/{id}/leads', [AudienceController::class, 'showLeads'])->name('audience.leads');
     Route::post('/audience/{id}/leads/{leadId}/remove', [AudienceController::class, 'removeLead'])->name('audience.leads.remove');
