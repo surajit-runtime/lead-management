@@ -85,8 +85,16 @@ require_once ("./assets/lang/" . $lang . ".php");
 
 <style>
     .chart-container {
-        height: 300px; /* Ensure all charts have the same height */
-        margin-bottom: 30px; /* Space between charts */
+        position: relative;
+        height: 300px; /* Adjust height as needed */
+        width: 100%;
+    }
+
+    .chart-container canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 </style>
 
@@ -505,7 +513,8 @@ require_once ("./assets/lang/" . $lang . ".php");
                         <li>
                             <a href="javascript: void(0);" class="has-arrow" data-key="">Campaign</a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="<?php echo e(route('campaignPage')); ?>" data-key="">Create Campaigns</a></li>
+                                <li><a href="<?php echo e(route('campaign.dashboard')); ?>" data-key="">Dashboard</a></li>
+                                <li><a href="<?php echo e(route('campaignPage')); ?>" data-key="">Create Campaign</a></li>
                                 <li><a href="<?php echo e(route('allCampaign')); ?>" data-key="">All Campaigns</a></li>
                                 <li><a href="<?php echo e(route('campaignDrafts')); ?>" data-key="">Draft Campaigns</a></li>
                                 <li><a href="<?php echo e(route('publishCampaigns')); ?>" data-key="">Published Campaigns</a></li>

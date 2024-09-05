@@ -12524,3 +12524,17 @@
 #57 C:\\Runtime\\Lead Management Project files\\Lead management\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Runtime\\\\Lead...')
 #58 {main}
 "} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":38} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":37} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":36} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":35} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":34} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":33} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":31} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":30} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":29} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":28} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":15} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":13} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":12} 
+[2024-09-05 13:02:35] development.INFO: Processing lead {"lead_id":11} 
